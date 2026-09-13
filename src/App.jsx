@@ -6,14 +6,16 @@ import Cardapio from './pages/Cardapio'
 import Pedidos from './pages/Pedidos'
 import Carrinho from './pages/Carrinho'
 import Footer from './components/Footer'
+import Header from './components/Header'
 
 
 const App = () => {
 
   return (
     <>
-      <Navbar />
-      <BrowserRouter>
+    <BrowserRouter>
+      <Header/>
+      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pontosFidelidade" element={<PontosFidelidade />} />

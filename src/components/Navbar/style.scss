@@ -1,0 +1,69 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.nav-links-list {
+  display: none;
+}
+
+/**big screens**/
+
+@media screen and (min-width: 900px) {
+
+  
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    width: 100%;
+
+    border: rgba(144, 143, 143, 0.981);
+  }
+
+  .logo {
+
+    span{
+      font-size: map-get(map-get($mobile, font-size), logo);
+     
+    }
+
+ 
+    
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: map-get($global-fonts, font-logo);
+  padding-right: 30px;
+  }
+
+  .navbar-links ul {
+    display: flex;
+    flex-direction: row;
+
+    list-style-type: none;
+    width: 90%;
+  }
+
+  .navbar-links li {
+    display: flex;
+    margin-right: 30px;
+    font-size: map-get(map-get($mobile, font-size), body);
+  }
+
+  .navbar-links li a {
+    color: map-get($colors, color-primary);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .navbar-links li a:hover{
+@include hover-links;
+  }
+
+  }
+

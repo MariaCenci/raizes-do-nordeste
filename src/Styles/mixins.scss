@@ -1,4 +1,6 @@
+@use "sass:map";
 @import "./variables.scss";
+
 
 @mixin flex-center() {
   display: flex;
