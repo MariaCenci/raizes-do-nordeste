@@ -11,7 +11,8 @@
 
 body{
 font-family: map-get($global-fonts, font-body);
-color: map.get(map.get($colors, color), body)
+color: map.get(map.get($colors, color), body);
+background-color: map.get($colors, bg-main);
 }
 
 

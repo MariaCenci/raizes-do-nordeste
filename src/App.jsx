@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/cardapio" element={<Cardapio />} />
           <Route path="/pedidos" element={<Pedidos />} />
           <Route path="/carrinho" element={<Carrinho />} />
-        </Routes>
+        </Routes> 
       </BrowserRouter>
 
       <Footer />
