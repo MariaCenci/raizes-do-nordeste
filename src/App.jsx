@@ -7,17 +7,23 @@ import Pedidos from './pages/Pedidos'
 import Carrinho from './pages/Carrinho'
 import Footer from './components/Footer'
 import Header from './components/Header'
-
+import Navbar from './components/Navbar'
+import Login from './pages/Login'
+import Cadastro from './pages/Cadastro'
 
 const App = () => {
+ const logado = localStorage.getItem("logado");
 
   return (
-    <>
-    <BrowserRouter>
-      <Header/>
+    <> 
+    <BrowserRouter>  
+   {logado &&  <Header/>}
+     
       
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/inicio" element={<Home />} />
           <Route path="/pontosFidelidade" element={<PontosFidelidade />} />
           <Route path="/cardapio" element={<Cardapio />} />
           <Route path="/pedidos" element={<Pedidos />} />
@@ -25,7 +31,7 @@ const App = () => {
         </Routes> 
       </BrowserRouter>
 
-      <Footer />
+        {logado && <Footer />}
 
     </>
   )

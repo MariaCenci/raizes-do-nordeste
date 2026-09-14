@@ -8,18 +8,25 @@ const Footer = () => {
           <div className="social-container">
             <div className="social">
               <div className="social-item">
-                <img
+                <a href="mailto:raizesNordeste@gmail.com">
+                 <img
                   className="social-img"
                   src="./message.png"
                   alt="email"
+                  
                 />
+                </a>
+               
               </div>
               <div className="social-item">
-               <img
+                <a href="tel:+5548000000">
+                  <img
                   className="social-img"
                   src="./telephone.png"
-                  alt="instagram"
+                  alt="ligar"
                 />
+                </a>
+               
               </div>
               <div className="social-item">
                 <img
