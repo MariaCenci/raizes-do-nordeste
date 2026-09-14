@@ -1,54 +1,44 @@
-$global-fonts: (
-  font-body: "Poppins",
-  font-logo: "Montserrat",
-  font-hero: "Poppins",
-);
-
 $colors: (
-  color-primary: black,
-  color-secondary: white,
-  color-tertiary: rgb(75, 74, 74),
-  color-dark-gray: rgb(45, 45, 45),
-  bg-section: rgba(246, 246, 246, 0.851),
-  separator-line: rgba(133, 133, 133, 0.677),
-  color-blue: #001c4a,
-  color-hover: rgb(105, 130, 167),
-  bg-main: rgb(255, 246, 219),
-
-  color: (
-    body: rgb(147, 147, 147),
-  ),
+  primary: black,
+  secondary: white,
+  bg-nav: rgb(248, 248, 248),
+  hover-links-nav: rgb(238, 223, 126),
+  links-nav-bars: rgb(174, 140, 175),
+  bg-mobile-menu: rgba(243, 227, 243, 0.091),
+  btn: rgba(162, 112, 163, 0.612),
+  btn2: rgb(207, 183, 211),
+  btn1-hover: rgba(202, 139, 202, 0.734),
+  btn2-hover: rgb(228, 205, 226),
+  bg1-section: rgb(255, 244, 201),
+  bg2-section: white,
+  bg3-section: rgba(222, 204, 228, 0.175),
+  bg-tag: rgba(186, 153, 174, 0.547),
 );
 
-$mobile: (
-  font-size: (
-    body: 1em,
-    logo: 1em,
-    title1: 2.5em,
-    title2: 1.2em,
-    title3: 1.5em,
-    subtitle: 1.1em,
-    subtitle-about: 1.2em,
-    project-title: 1.3em,
-  ),
-);
-
-$tablet: (
-  font-size: (
-    body: 1.1em,
-    title1: 3em,
-    title3: 2.1em,
-
-    subtitle-about: 1.5em,
-  ),
-);
-
-$desktop: (
-  font-size: (
-    body: 1.2em,
-    title1: 56px,
-    title3: 2.1em,
+$font-size: (
+  xs: 0.8rem,
+  sm: 1rem,
+  md: 1.2rem,
+  lg: 1.5rem,
+  xl: 2.3rem,
+  xxl: 3.2rem,
+  hero: 4rem,
+  hero-mobile: 2.1rem,
+  hero-xtra: 7.4rem
   
-    subtitle-about: 1.3em,
+);
+
+$font-family: (
+  nav-links: (
+    "Quicksand",
+    sans-serif,
+  ),
+  body: (
+    "Roboto",
+    sans-serif,
+  ),
+  h1: (
+    "Josefin-sans",
+    sans-serif,
   ),
 );

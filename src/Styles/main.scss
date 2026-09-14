@@ -6,13 +6,27 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    h1{
+    font-size: map.get($font-size, lg);
+    color: map.get($colors, primary);
+}
 }
 
 
 body{
-font-family: map-get($global-fonts, font-body);
-color: map.get(map.get($colors, color), body);
-background-color: map.get($colors, bg-main);
+font-family: map-get($font-family, body);
+color: map.get($colors, primary);
+background-color: map.get($colors, bg1-section);
+font-size: map.get($font-size, sm)
+
 }
 
-
+@media screen and (min-width: 900px) {
+    h1{
+      font-size: map.get($font-size, xl);   
+    }
+    body{
+        font-size: map.get($font-size, md)
+    }
+    
+}

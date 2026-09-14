@@ -1,3 +1,4 @@
+@use "sass:map";
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
@@ -11,7 +12,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: map-get($colors, color-secondary);
+  background-color: map.get($colors, secondary);
   height: 10vh;
   width: 100%;
   box-shadow: 1px 1px 15px rgba(73, 73, 73, 0.345);
@@ -19,10 +20,10 @@
   padding: 1.5em 1.4em;
 
   .logo {
-    font-family: map-get($global-fonts, font-logo);
-    font-size: map-get(map-get($mobile, font-size), logo);
-    color: map-get($colors, color-primary);
-    margin-left: 0.5em;
+    font-family: map-get($font-size, sm);
+    font-size: map-get($font-size, sm);
+    color: map-get($colors, primary);
+    margin-left: .2em;
     font-weight: 600;
     display: flex;
     align-items: center;

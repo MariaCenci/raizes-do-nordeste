@@ -39,16 +39,16 @@ const HamburguerMenu = () => {
                <div className="menu-list">
                   <ul className="list-pages">
                      <li>
-                        <Link to="home" smooth={true} duration={500} onClick={closeMenu} >Home</Link>
+                        <Link to="pontosFidelidade" smooth={true} duration={500} onClick={closeMenu} >Pontos fidelidade</Link>
                      </li>
                      <li>
-                        <Link to="about" smooth={true} duration={500} onClick={closeMenu}>Sobre</Link >
+                        <Link to="cardapio" smooth={true} duration={500} onClick={closeMenu}>Cardápio</Link >
                      </li>
                      <li>
-                        <Link to="projects" smooth={true} duration={500} onClick={closeMenu}>Projetos</Link>
+                        <Link to="pedidos" smooth={true} duration={500} onClick={closeMenu}>Pedidos</Link>
                      </li>
                      <li>
-                        <Link to="contact" smooth={true} duration={500} onClick={closeMenu} >Contato</Link>
+                        <Link to="carrinho" smooth={true} duration={500} onClick={closeMenu} >Carrinho</Link>
                      </li>
                   </ul>
                </div>

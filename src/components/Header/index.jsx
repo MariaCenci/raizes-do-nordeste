@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../Navbar";
 import "./style.scss";
 
@@ -7,8 +8,9 @@ const Header = () => {
     <section id="header">
       <div className="header-container">
         <div className="logo">
+          <Link to="/" >
          <span id="logo-img"><img src="../logo.png" width="144px" alt="logo" /></span>
-         
+         </Link>
         </div>
         <Navbar />
       </div>

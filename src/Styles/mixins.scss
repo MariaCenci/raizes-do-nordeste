@@ -43,13 +43,13 @@
 }
 
 @mixin hover-links() {
-  color: map-get($colors, color-hover);
+  color: map-get($colors,  hover-links-nav);
   transition: 0.4s;
   cursor: pointer;
 }
 
 @mixin hover-icons-home() {
-  color: map-get($colors, color-hover);
+  color: map-get($colors, hover-links-nav);
   transform: scale(1.1);
   transition: 0.3s;
 }

@@ -31,16 +31,16 @@ const Navbar = () => {
            
             <ul className="nav-links-list">
             <li>
-                <Link to="home"   >Home</Link>
+                <Link to="pontosFidelidade"   >Pontos fidelidade</Link>
               </li>
               <li>
-                <Link to="about"   >About</Link >
+                <Link to="cardapio"   >Cardápio</Link >
               </li>
               <li>
-                <Link to="projects"  >Projects</Link>
+                <Link to="pedidos"  >Pedidos</Link>
               </li>
               <li>
-                <Link to="contact"  >Contact</Link>
+                <Link to="carrinho"  ><img id='cart-icon' src="./trolley.png" alt="carrinho" /></Link>
               </li>
             </ul>
           </div>

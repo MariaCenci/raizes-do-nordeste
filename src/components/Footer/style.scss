@@ -1,0 +1,112 @@
+@import "../../styles/variables.scss";
+
+#footer {
+  background-color: map-get($colors, bg1-section);
+  padding: 28px 0 18px 0;
+
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 38px;
+
+    .social-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 8px;
+      .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+
+        .social-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: white;
+          width: 48px;
+          height: 48px;
+          border-radius: 50px;
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.23);
+          transition: transform 0.3s ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          .social-img {
+            width: 28px;
+          }
+        }
+      }
+    }
+
+    .footer-text {
+      font-size: map-get($font-size, sm);
+    }
+  }
+}
+
+@media (max-width: 559px) {
+  #footer {
+    
+
+    .footer-container {
+      gap: 32px;
+
+      .social-container {
+        .social {
+          gap:18px;
+
+          .social-item {
+            width: 32px;
+            height: 32px;
+        
+
+            .social-img {
+              width: 18px;
+            }
+          }
+        }
+      }
+
+      .footer-text {
+        font-size: map-get($font-size, xs);
+      }
+    }
+  }
+}
+
+@media (min-width: 2560px) {
+  #footer {
+    padding: 88px 0 68px 0;
+
+    .footer-container {
+      gap: 98px;
+
+      .social-container {
+        .social {
+          gap: 38px;
+
+          .social-item {
+            width: 88px;
+            height: 88px;
+            border-radius: 50px;
+
+            .social-img {
+              width: 48px;
+            }
+          }
+        }
+      }
+
+      .footer-text {
+        font-size: map-get($font-size, lg);
+      }
+    }
+  }
+}
