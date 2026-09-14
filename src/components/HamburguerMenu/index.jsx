@@ -38,6 +38,9 @@ const HamburguerMenu = () => {
             {activeMenu && (
                <div className="menu-list">
                   <ul className="list-pages">
+                         <li>
+                        <Link to="/" smooth={true} duration={500} onClick={closeMenu} >Início</Link>
+                     </li>
                      <li>
                         <Link to="pontosFidelidade" smooth={true} duration={500} onClick={closeMenu} >Pontos fidelidade</Link>
                      </li>

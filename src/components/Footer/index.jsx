@@ -10,18 +10,22 @@ const Footer = () => {
               <div className="social-item">
                 <img
                   className="social-img"
-                  src="./icons/instagram.svg"
+                  src="./message.png"
+                  alt="email"
+                />
+              </div>
+              <div className="social-item">
+               <img
+                  className="social-img"
+                  src="./telephone.png"
                   alt="instagram"
                 />
               </div>
               <div className="social-item">
-                {" "}
-              </div>
-              <div className="social-item">
                 <img
                   className="social-img"
-                  src="./icons/twitter.svg"
-                  alt="twitter"
+                  src="./instagram.png"
+                  alt="instagram"
                 />
               </div>
             </div>
