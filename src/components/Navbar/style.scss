@@ -1,3 +1,4 @@
+@use "sass:map";
 @import "../../styles/mixins.scss";
 @import "../../styles/variables.scss";
 
@@ -8,29 +9,21 @@
 /**big screens**/
 
 @media screen and (min-width: 900px) {
-
-  
   .navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    
     width: 100%;
 
     border: rgba(144, 143, 143, 0.981);
   }
 
   .logo {
-
-    span{
+    span {
       font-size: map-get($font-size, xs);
-     
     }
-
- 
-    
   }
 
   .navbar-links {
@@ -38,14 +31,13 @@
     flex-direction: row;
     justify-content: center;
     font-family: map-get($font-size, sm);
-  //padding-right: 10px;
-  
+    //padding-right: 10px;
   }
 
   .navbar-links ul {
     display: flex;
     flex-direction: row;
-gap: 20px;
+    gap: 20px;
     list-style-type: none;
     //width: 90%;
   }
@@ -53,9 +45,26 @@ gap: 20px;
   .navbar-links li {
     display: flex;
     align-items: center;
-justify-content: center;    
-margin-right: 30px;
+    justify-content: center;
+    margin-right: 30px;
     font-size: map-get($font-size, sm);
+
+.btn-logout{
+  border: none;
+  background-color: map.get($colors, secondary);
+  cursor: pointer;
+
+ img{
+  width: 12px;
+ }
+
+ span{
+  padding-right: 6px;
+  font-family: map.get($font-family, nav-links);
+  font-weight: 500;
+ }
+}
+
   }
 
   .navbar-links li a {
@@ -63,17 +72,14 @@ margin-right: 30px;
     text-decoration: none;
     font-weight: 500;
 
-
-    #cart-icon{
+    #cart-icon {
       width: 25px;
       align-items: center;
       justify-content: center;
     }
   }
 
-  .navbar-links li a:hover{
-@include hover-links;
+  .navbar-links li a:hover {
+    @include hover-links;
   }
-
-  }
-
+}

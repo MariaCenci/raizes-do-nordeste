@@ -7,7 +7,6 @@ import Pedidos from './pages/Pedidos'
 import Carrinho from './pages/Carrinho'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Navbar from './components/Navbar'
 import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
 
@@ -17,8 +16,8 @@ const App = () => {
   return (
     <> 
     <BrowserRouter>  
-   {logado &&  <Header/>}
-     
+   
+     {logado &&  <Header/>}
       
         <Routes>
           <Route path="/" element={<Login />} />

@@ -51,6 +51,7 @@ ul.list-pages li a {
   height: 100vh;
   flex-wrap: nowrap;
   color: black;
+  
 }
 
 .menu-list .list-pages {
@@ -64,8 +65,26 @@ ul.list-pages li a {
   margin: 35px 0;
   color: black;
   margin-bottom: 50px;
-  font-size: map.get($font-size, sm);
+  font-size: map.get($font-size, xs);
   font-family: map-get($font-family, nav-links);
+
+.btn-logout{
+  border: none;
+  background-color: map.get($colors, secondary);
+  cursor: pointer;
+
+ img{
+  width: 12px;
+ }
+
+ span{
+  font-size: map.get($font-size, xs);
+  padding-right: 6px;
+  font-family: map.get($font-family, nav-links);
+  font-weight: 500;
+ }
+}
+
 }
 
 .toggleActive .hamburguer-icon {

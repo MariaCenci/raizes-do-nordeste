@@ -25,6 +25,11 @@ const HamburguerMenu = () => {
       body.style.overflow = 'auto'
    }
 
+   const handleLogout = () => {
+      localStorage.removeItem("logado");
+      window.location.href = "/";
+   }
+
    return (
       <>
          <div
@@ -38,21 +43,31 @@ const HamburguerMenu = () => {
             {activeMenu && (
                <div className="menu-list">
                   <ul className="list-pages">
-                         <li>
+                     <li>
                         <Link to="/inicio" smooth={true} duration={500} onClick={closeMenu} >Início</Link>
                      </li>
                      <li>
                         <Link to="pontosFidelidade" smooth={true} duration={500} onClick={closeMenu} >Pontos fidelidade</Link>
                      </li>
                      <li>
-                        <Link to="cardapio" smooth={true} duration={500} onClick={closeMenu}>Cardápio</Link >
-                     </li>
+                        <Link to="cardapio" smooth={true} duration={500} onClick={closeMenu}>Cardápio</Link >  </li>
+
+                     <li> <Link to="cardapio-unidade-1" smooth={true} duration={500} onClick={closeMenu}>Cardápio unidade 1</Link ></li>
+                     <li> <Link to="cardapio-unidade-2" smooth={true} duration={500} onClick={closeMenu}>Cardápio unidade 2</Link ></li>
+                     <li>  <Link to="cardapio-unidade-3" smooth={true} duration={500} onClick={closeMenu}>Cardápio unidade 3</Link ></li>
+
                      <li>
                         <Link to="pedidos" smooth={true} duration={500} onClick={closeMenu}>Pedidos</Link>
                      </li>
                      <li>
                         <Link to="carrinho" smooth={true} duration={500} onClick={closeMenu} >Carrinho</Link>
                      </li>
+                     <li> <button
+                        class="btn-logout"
+                        onClick={handleLogout}><span>Sair</span>
+                        <img src="./logout.png" alt="sair" />
+
+                     </button></li>
                   </ul>
                </div>
             )}

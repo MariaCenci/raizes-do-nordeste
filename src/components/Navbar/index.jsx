@@ -20,6 +20,11 @@ const Navbar = () => {
     };
   }, []);
 
+   const handleLogout = () => {
+    localStorage.removeItem("logado");
+    window.location.href = "/";
+   }
+
   return (
     <>
         <div className="navbar-container">
@@ -41,6 +46,14 @@ const Navbar = () => {
               </li>
               <li>
                 <Link to="carrinho"  ><img id='cart-icon' src="./trolley.png" alt="carrinho" /></Link>
+              </li>
+              <li>
+                <button 
+                id="btn-logout"
+                onClick={handleLogout}><span>Sair</span>
+                  <img src="./logout.png" alt="sair" />
+                  
+                  </button>
               </li>
             </ul>
           </div>
