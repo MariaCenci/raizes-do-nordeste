@@ -12,8 +12,10 @@ const Login = () => {
   return (
 
     <>
-      <div className="wrapper-login">
+      <div className="wrapper-login">    
+        <img src="./logo.png" alt="logo" />
         <div className="container-login">
+      
           <h1>Bem-vindo!</h1>
           <p>Entre na sua conta</p>
 

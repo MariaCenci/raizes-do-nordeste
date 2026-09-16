@@ -1,15 +1,26 @@
+@use "sass:map";
+@import "../../styles/variables.scss";
+
 .wrapper-login {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: map.get($colors, secondary);
+
+    img{
+    width: 188px;
+    padding: 30px 10px;
+  }
 }
 
 .container-login {
-  width: 350px;
-  padding: 30px;
+  width: 86%;
+  padding: 24px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: map.get($colors, bg1-section);
+
 
   h1 {
     margin-bottom: 10px;
@@ -23,8 +34,9 @@
 
   input {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.182);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
   }
 
   button {
@@ -37,4 +49,9 @@
   a {
     text-decoration: none;
   }
+}
+
+@media screen and (min-width: 900px) {
+
+
 }

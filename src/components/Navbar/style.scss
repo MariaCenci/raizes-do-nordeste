@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-family: map-get($font-size, sm);
+    //font-size: map-get($font-size, sm);
     //padding-right: 10px;
   }
 
@@ -48,34 +48,45 @@
     justify-content: center;
     margin-right: 30px;
     font-size: map-get($font-size, sm);
+    font-family: map.get($font-family, nav-links);
 
-.btn-logout{
-  border: none;
-  background-color: map.get($colors, secondary);
-  cursor: pointer;
+    .btn-logout {
+      border: none;
+      background-color: map.get($colors, secondary);
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
 
- img{
-  width: 12px;
- }
+      &:hover {
+        transform: scale(1.1);
+      }
 
- span{
-  padding-right: 6px;
-  font-family: map.get($font-family, nav-links);
-  font-weight: 500;
- }
-}
+      img {
+        width: 12px;
+      }
 
+      span {
+        padding-right: 6px;
+        font-family: map.get($font-family, nav-links);
+        font-size: map.get($font-size, sm);
+        font-weight: 500;
+      }
+    }
   }
 
   .navbar-links li a {
     color: map-get($colors, primary);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
 
     #cart-icon {
       width: 25px;
       align-items: center;
       justify-content: center;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 

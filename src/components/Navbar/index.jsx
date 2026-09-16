@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import HamburguerMenu from "../HamburguerMenu";
@@ -25,6 +24,8 @@ const Navbar = () => {
     window.location.href = "/";
    }
 
+   
+
   return (
     <>
         <div className="navbar-container">
@@ -49,7 +50,7 @@ const Navbar = () => {
               </li>
               <li>
                 <button 
-                id="btn-logout"
+                class="btn-logout"
                 onClick={handleLogout}><span>Sair</span>
                   <img src="./logout.png" alt="sair" />
                   

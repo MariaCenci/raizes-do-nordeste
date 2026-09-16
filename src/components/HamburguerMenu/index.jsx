@@ -49,12 +49,13 @@ const HamburguerMenu = () => {
                      <li>
                         <Link to="pontosFidelidade" smooth={true} duration={500} onClick={closeMenu} >Pontos fidelidade</Link>
                      </li>
-                     <li>
-                        <Link to="cardapio" smooth={true} duration={500} onClick={closeMenu}>Cardápio</Link >  </li>
 
-                     <li> <Link to="cardapio-unidade-1" smooth={true} duration={500} onClick={closeMenu}>Cardápio unidade 1</Link ></li>
-                     <li> <Link to="cardapio-unidade-2" smooth={true} duration={500} onClick={closeMenu}>Cardápio unidade 2</Link ></li>
-                     <li>  <Link to="cardapio-unidade-3" smooth={true} duration={500} onClick={closeMenu}>Cardápio unidade 3</Link ></li>
+                     <div id="cardapio-list">
+                        <p>Cardápio</p>
+                        <li> <Link to="cardapio-unidade-1" smooth={true} duration={500} onClick={closeMenu}>Cardápio unidade 1</Link ></li>
+                        <li> <Link to="cardapio-unidade-2" smooth={true} duration={500} onClick={closeMenu}>Cardápio unidade 2</Link ></li>
+                        <li>  <Link to="cardapio-unidade-3" smooth={true} duration={500} onClick={closeMenu}>Cardápio unidade 3</Link ></li>
+                     </div>
 
                      <li>
                         <Link to="pedidos" smooth={true} duration={500} onClick={closeMenu}>Pedidos</Link>

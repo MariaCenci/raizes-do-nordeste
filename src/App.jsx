@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import Home from './pages/Home'
 import PontosFidelidade from './pages/PontosFidelidade'
@@ -20,7 +20,10 @@ const App = () => {
      {logado &&  <Header/>}
       
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route
+  path="/"
+  element={logado ? <Navigate to="/inicio" /> : <Login />}
+/>
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/inicio" element={<Home />} />
           <Route path="/pontosFidelidade" element={<PontosFidelidade />} />
