@@ -9,49 +9,71 @@
   align-items: center;
   background-color: map.get($colors, secondary);
 
-    img{
-    width: 188px;
+  img {
+    width: 184px;
     padding: 30px 10px;
   }
 }
 
 .container-login {
   width: 86%;
-  padding: 24px;
+  padding: 28px;
   border-radius: 10px;
-  background-color: map.get($colors, bg1-section);
+  background-color: map.get($colors, login);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.156);
+
 
 
   h1 {
     margin-bottom: 10px;
+    font-family: map.get($font-family, h1);
   }
 
   form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 4px;
   }
 
   input {
     padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.182);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.105);
     border-radius: 10px;
+  }
+
+  label{
+    padding-top:16px;
   }
 
   button {
     padding: 10px;
+    margin: 12px 0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background-color: map.get($colors, btn2);
+    color: map.get($colors, secondary);
+    font-weight: 700;
+    font-family: map.get($font-family, nav-links);
   }
 
   a {
-    text-decoration: none;
+    //text-decoration: none;
+    padding-left: 6px;
+    color: map.get($colors, link);
+    font-weight: 500;
   }
+
+p{
+padding-bottom: 20px;
+}
 }
 
 @media screen and (min-width: 900px) {
-
-
+  .wrapper-login {
+    img {
+      width: 25%;
+    }
+  }
 }
