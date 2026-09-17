@@ -1,12 +1,12 @@
 @use "sass:map";
-@import "../../styles/variables";
+@import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
 .hamburguer-icon {
   position: absolute;
   width: 15px;
   height: 1.8px;
-  background-color: map-get($colors, primary);
+  background-color: map.get($colors, primary);
   transition: 0.5s;
   border-radius: 15px;
 
@@ -21,7 +21,7 @@
   width: 20px;
   height: 1.8px;
   border-radius: 15px;
-  background-color: map-get($colors, primary);
+  background-color: map.get($colors, primary);
 }
 
 .hamburguer-icon::after {
@@ -31,7 +31,7 @@
   width: 20px;
   height: 1.8px;
   border-radius: 15px;
-  background-color: map-get($colors, primary);
+  background-color: map.get($colors, primary);
 }
 
 ul.list-pages li {
@@ -77,7 +77,7 @@ text-align: center;
   color: black;
   margin-bottom: 50px;
   font-size: map.get($font-size, xs);
-  font-family: map-get($font-family, nav-links);
+  font-family: map.get($font-family, nav-links);
   //padding: 10px 0;
 
 .btn-logout{
@@ -106,7 +106,7 @@ text-align: center;
 
 .toggleActive .hamburguer-icon::after {
   top: 0;
-  background: map-get($colors, primary);
+  background: map.get($colors, primary);
   transform: rotate(225deg);
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -115,7 +115,7 @@ text-align: center;
 
 .toggleActive .hamburguer-icon::before {
   top: 0;
-  background: map-get($colors, primary);
+  background: map.get($colors, primary);
   transform: rotate(135deg);
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
   position: absolute;

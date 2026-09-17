@@ -3,12 +3,10 @@ $colors: (
   secondary: white,
   bg-nav: rgb(248, 248, 248),
   hover-links-nav: rgb(238, 223, 126),
-  links-nav-bars: rgb(174, 140, 175),
-  bg-mobile-menu: rgba(243, 227, 243, 0.091),
   btn: rgb(228, 255, 223),
   btn2: rgb(95, 172, 76),
   btn1-hover: rgba(202, 139, 202, 0.734),
-  btn2-hover: rgb(228, 205, 226),
+  btn2-hover: rgb(145, 189, 130),
   bg1-section: rgb(255, 248, 219),
   login: rgb(255, 246, 206),
   link: rgb(197, 47, 10),
@@ -17,7 +15,7 @@ $colors: (
 );
 
 $font-size: (
-  xs: 0.8rem,
+  xs: 0.9rem,
   sm: 1rem,
   md: 1.2rem,
   lg: 1.5rem,

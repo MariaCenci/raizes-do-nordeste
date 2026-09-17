@@ -7,19 +7,25 @@ const Login = () => {
     localStorage.setItem("logado", "true");
     window.location.href = "/inicio";
 
-    
   }
   return (
 
     <>
-      <div className="wrapper-login">    
+      <div className="wrapper-login">
         <img src="./logo.png" alt="logo" />
         <div className="container-login">
-      
-          <h1>Bem-vindo!</h1>
+
+          <h2>Bem-vindo!</h2>
           <p>Entre na sua conta</p>
 
           <form onSubmit={handleLogin}>
+            <label htmlFor="nome">Nome</label>
+            <input
+              type="name"
+              id="nome"
+              placeholder="Digite seu nome"
+            />
+
             <label htmlFor="telefone">Telefone</label>
             <input
               type="tel"
@@ -37,10 +43,13 @@ const Login = () => {
             <button type="submit">Entrar</button>
           </form>
 
+
           <p>
             Ainda não tem uma conta?
-            <Link to="/cadastro">Cadastre-se</Link>
+            <span><Link to="/cadastro">Cadastre-se</Link></span>
           </p>
+
+
         </div>
 
       </div>

@@ -1,1 +1,105 @@
+@use "sass:map";
+@import "../../styles/variables.scss";
 
+.wrapper-login {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: map.get($colors, secondary);
+
+  img {
+    width: 170px;
+    padding: 24px 10px;
+  }
+}
+
+.container-login {
+  width: 86%;
+  padding: 28px;
+  border-radius: 10px;
+  background-color: map.get($colors, login);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.156);
+
+  h2 {
+    margin-bottom: 10px;
+    font-family: map.get($font-family, h1);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  input {
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.182);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.105);
+    border-radius: 10px;
+  }
+
+  label {
+    padding-top: 16px;
+    font-size: map.get($font-size, xs);
+  }
+
+  button {
+    padding: 10px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: map.get($colors, btn2);
+    color: map.get($colors, secondary);
+    font-weight: 700;
+    font-family: map.get($font-family, nav-links);
+  }
+
+  a {
+    //text-decoration: none;
+    //padding-left: 6px;
+    color: map.get($colors, link);
+    font-weight: 500;
+    font-size: map.get($font-size, xs);
+  }
+
+  p {
+    padding-bottom: 20px;
+    font-size: map.get($font-size, xs);
+     display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+.mensagem-sucesso{
+
+   color: map.get($colors, link);
+   font-weight: bold;
+}
+
+}
+
+@media screen and (min-width: 900px) {
+  .wrapper-login {
+    img {
+      width: 25%;
+    }
+
+    .container-login {
+      button {
+        transition: transform ease 1s;
+        cursor: pointer;
+
+&:hover{
+  background-color: map.get($colors, btn2-hover);
+}
+
+        &:active {
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+}
