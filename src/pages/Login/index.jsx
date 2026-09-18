@@ -19,12 +19,6 @@ const Login = () => {
           <p>Entre na sua conta</p>
 
           <form onSubmit={handleLogin}>
-            <label htmlFor="nome">Nome</label>
-            <input
-              type="name"
-              id="nome"
-              placeholder="Digite seu nome"
-            />
 
             <label htmlFor="telefone">Telefone</label>
             <input

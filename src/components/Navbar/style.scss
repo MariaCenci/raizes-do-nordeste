@@ -47,7 +47,7 @@
     align-items: center;
     justify-content: center;
     margin-right: 30px;
-    font-size: map-get($font-size, sm);
+    font-size: map-get($font-size, xs);
     font-family: map.get($font-family, nav-links);
 
     .btn-logout {
@@ -67,7 +67,7 @@
       span {
         padding-right: 6px;
         font-family: map.get($font-family, nav-links);
-        font-size: map.get($font-size, sm);
+        font-size: map.get($font-size, xs);
         font-weight: 500;
       }
     }

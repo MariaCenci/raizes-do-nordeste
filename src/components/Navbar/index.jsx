@@ -39,9 +39,18 @@ const Navbar = () => {
             <li>
                 <Link to="pontosFidelidade"   >Pontos fidelidade</Link>
               </li>
-              <li>
-                <Link to="cardapio"   >Cardápio</Link >
-              </li>
+            
+               <li className="select-cardapio">
+  <Link to="cardapio">Cardápio</Link>
+
+  <select>
+    <option value="">Unidade</option>
+    <option value="unidade1">Unidade 1</option>
+    <option value="unidade2">Unidade 2</option>
+    <option value="unidade3">Unidade 3</option>
+  </select>
+</li>
+           
               <li>
                 <Link to="pedidos"  >Pedidos</Link>
               </li>
