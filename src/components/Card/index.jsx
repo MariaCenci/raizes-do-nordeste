@@ -12,7 +12,7 @@ const Card = ({ title, src, text, tag, price }) => {
         <img
           className="card-item-img"
           src={src}
-          alt="Bakery item"
+          alt="comida nordestina"
           loading="lazy"
         />
 

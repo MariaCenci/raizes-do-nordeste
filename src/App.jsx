@@ -11,29 +11,29 @@ import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
 
 const App = () => {
- const logado = localStorage.getItem("logado");
+  const logado = localStorage.getItem("logado");
 
   return (
-    <> 
-    <BrowserRouter>  
-   
-     {logado &&  <Header/>}
-      
+    <>
+      <BrowserRouter>
+
+        {logado && <Header />}
+
         <Routes>
           <Route
-  path="/"
-  element={logado ? <Navigate to="/inicio" /> : <Login />}
-/>
+            path="/"
+            element={logado ? <Navigate to="/inicio" /> : <Login />}
+          />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/inicio" element={<Home />} />
           <Route path="/pontosFidelidade" element={<PontosFidelidade />} />
-          <Route path="/cardapio" element={<Cardapio />} />
+          <Route path="/cardapio/:unidade" element={<Cardapio />} />
           <Route path="/pedidos" element={<Pedidos />} />
           <Route path="/carrinho" element={<Carrinho />} />
-        </Routes> 
+        </Routes>
       </BrowserRouter>
 
-        {logado && <Footer />}
+      {logado && <Footer />}
 
     </>
   )

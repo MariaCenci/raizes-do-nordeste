@@ -32,6 +32,12 @@
     justify-content: center;
     //font-size: map-get($font-size, sm);
     //padding-right: 10px;
+
+    select {
+      margin-left: 6px;
+      border-radius: 6px;
+      border-color: rgba(56, 56, 56, 0.327);
+    }
   }
 
   .navbar-links ul {
@@ -69,6 +75,11 @@
         font-family: map.get($font-family, nav-links);
         font-size: map.get($font-size, xs);
         font-weight: 500;
+      }
+    }
+    .select-cardapio {
+      select {
+        padding-left: 10px;
       }
     }
   }

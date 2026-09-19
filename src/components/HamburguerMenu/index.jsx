@@ -52,9 +52,23 @@ const HamburguerMenu = () => {
 
                      <div id="cardapio-list">
                         <p>Cardápio</p>
-                        <li> <Link to="cardapio-unidade-1" smooth={true} duration={500} onClick={closeMenu}>Cardápio unidade 1</Link ></li>
-                        <li> <Link to="cardapio-unidade-2" smooth={true} duration={500} onClick={closeMenu}>Cardápio unidade 2</Link ></li>
-                        <li>  <Link to="cardapio-unidade-3" smooth={true} duration={500} onClick={closeMenu}>Cardápio unidade 3</Link ></li>
+                        <li>
+    <Link to="/cardapio/unidade1" onClick={closeMenu}>
+      Cardápio unidade 1
+    </Link>
+  </li>
+
+  <li>
+    <Link to="/cardapio/unidade2" onClick={closeMenu}>
+      Cardápio unidade 2
+    </Link>
+  </li>
+
+  <li>
+    <Link to="/cardapio/unidade3" onClick={closeMenu}>
+      Cardápio unidade 3
+    </Link>
+  </li>
                      </div>
 
                      <li>
@@ -64,9 +78,9 @@ const HamburguerMenu = () => {
                         <Link to="carrinho" smooth={true} duration={500} onClick={closeMenu} >Carrinho</Link>
                      </li>
                      <li> <button
-                        class="btn-logout"
+                        className="btn-logout"
                         onClick={handleLogout}><span>Sair</span>
-                        <img src="./logout.png" alt="sair" />
+                        <img src="/logout.png" alt="sair" />
 
                      </button></li>
                   </ul>

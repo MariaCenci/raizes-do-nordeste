@@ -3,14 +3,14 @@ import "./style.scss"
 const Home = () => {
   return (
     <>
-      <div class="home-wrapper">
+      <div className="home-wrapper">
         <div className="container-hero">
           <div id="hero-banner">
             <img src="./img5.jpg" alt="comida nordestina" />
            
           </div>
         </div>
-        <div class="container-about">
+        <div className="container-about">
           <div className="text-wrapper">
             <h1>Sobre nós</h1>
             <p>A Raízes do Nordeste nasceu de um sonho familiar: levar o verdadeiro sabor e a cultura nordestina para o dia a dia de todos. Começamos pequenos, com receitas feitas com carinho e ingredientes que carregam a tradição do Nordeste.
