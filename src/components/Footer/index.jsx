@@ -11,7 +11,7 @@ const Footer = () => {
                 <a href="mailto:raizesNordeste@gmail.com">
                  <img
                   className="social-img"
-                  src="./message.png"
+                  src="/message.png"
                   alt="email"
                   
                 />
@@ -22,7 +22,7 @@ const Footer = () => {
                 <a href="tel:+5548000000">
                   <img
                   className="social-img"
-                  src="./telephone.png"
+                  src="/telephone.png"
                   alt="ligar"
                 />
                 </a>
@@ -31,7 +31,7 @@ const Footer = () => {
               <div className="social-item">
                 <img
                   className="social-img"
-                  src="./instagram.png"
+                  src="/instagram.png"
                   alt="instagram"
                 />
               </div>

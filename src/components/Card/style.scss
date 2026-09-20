@@ -4,14 +4,13 @@
 .card-item {
  min-width: 250px;
 max-width: 400px;
-  //width: 60%;
   min-height: 450px;
-  max-height: 350px;
+  max-height: 490px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.337);
-  border-radius: 10px;
+  border-radius: 12px;
   position: relative;
   background-color: map-get($colors, secondary);
-
+    margin-bottom: 30px;
   .card-item-img {
     width: 100%;
     height: 212px;
@@ -25,7 +24,7 @@ max-width: 400px;
     h2 {
       font-family: map-get($font-family, nav-links);
       font-weight: 600;
-      font-size: map-get($font-size, xs);
+      font-size: map-get($font-size, sm);
       padding-bottom: 10px;
     }
 
@@ -34,7 +33,7 @@ max-width: 400px;
       font-family: map-get($font-family, body);
       font-weight: 300;
       padding-bottom: 10px;
-      height: 120px;
+      height: 140px;
     }
   .btn-container {
       display: flex;
@@ -42,17 +41,21 @@ max-width: 400px;
       align-items: center;
 
 button{
-  width: 100px;
+  width: 68px;
   padding: 10px;
   border: none;
-  border-radius: 28px;
-  box-shadow: 0 0 2px rgba(47, 47, 47, 0.775);
-  font-size: map-get($font-size, xs);
-  font-family: map-get($font-family, body);
+  border-radius: 20px;
+  box-shadow: 0 0 3px rgba(47, 47, 47, 0.612);
+  font-size: map.get($font-size, xs);
+  font-family: map.get($font-family, body);
   font-weight: 500;
   color: map-get($colors, secondary);
   background-color: map.get($colors, btn3);
   cursor: pointer;
+
+  &:hover{
+    background-color: map.get($colors, btn2-hover);
+  }
 
   img{
     width: 20px;
@@ -84,193 +87,11 @@ button{
   }
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
-  .card-item {
-    min-width: 280px;
-    max-width: 382px;
-    height: 510px;
-
-    .card-info-container {
-      h2 {
-        font-size: map-get($font-size, lg);
-      }
-      p {
-        font-size: map-get($font-size, lg);
-        height: 152px;
-      }
-
-      .btn-container {
-        .btn-card-item {
-          min-width: 158px;
-          max-width: 178px;
-          font-size: map-get($font-size, sm);
-        }
-
-        span {
-          font-size: map-get($font-size, lg);
-        }
-      }
-    }
-  }
 }
 
-@media (min-width: 670px) and (max-width: 767px) {
-  .card-item {
-    min-width: 280px;
-    max-width: 382px;
+@media screen and (min-width: 900px) {
 
-    .card-info-container {
-      h2 {
-        font-size: map-get($font-size, lg);
-      }
-      p {
-        font-size: map-get($font-size, lg);
-        height: 162px;
-      }
-
-      .btn-container {
-        .btn-card-item {
-          width: 120px;
-          font-size: map-get($font-size, sm);
-        }
-
-        span {
-          font-size: map-get($font-size, lg);
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 560px) and (max-width: 669px) {
-  .card-item {
-    min-width: 200px;
-    max-width: 290px;
-    height: 490px;
-
-    .card-info-container {
-      h2 {
-        font-size: map-get($font-size, lg);
-      }
-      p {
-        font-size: map-get($font-size, md);
-        height: 158px;
-      }
-
-      .btn-container {
-        .btn-card-item {
-          width: 120px;
-          font-size: map-get($font-size, sm);
-        }
-
-        span {
-          font-size: map-get($font-size, md);
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 481px) and (max-width: 559px) {
-  .card-item {
-    height: 500px;
-    width: 100%;
-
-    .card-info-container {
-      h2 {
-        font-size: map-get($font-size, lg);
-      }
-      p {
-        font-size: map-get($font-size, lg);
-        height: 148px;
-      }
-
-      .btn-container {
-        .btn-card-item {
-          width: 150px;
-          font-size: map-get($font-size, md);
-        }
-
-        span {
-          font-size: map-get($font-size, lg);
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .card-item {
-    width: 100%;
-    height: 488px;
-    .card-info-container {
-      h2 {
-        font-size: map-get($font-size, lg);
-      }
-      p {
-        font-size: map-get($font-size, md);
-        height: 148px;
-      }
-      .btn-container {
-        .btn-card-item {
-          width: 130px;
-          font-size: map-get($font-size, sm);
-        }
-        span {
-          font-size: map-get($font-size, lg);
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 2560px) {
-  .card-item {
-    min-width: 520px;
-    max-width: 550px;
-    min-height: 710px;
-    max-height: 720px;
-   
-
-    .card-item-img {
-      width: 100%;
-      height: 320px;
-    }
-
-    .card-info-container {
-   
-      padding: 18px 28px;
-      h2 {
-        font-size: map-get($font-size, xl);
-      }
-
-      p {
-        font-size: map-get($font-size, hero-mobile);
-        height: 220px;
-      }
-
-    
-      .btn-container {
-    
-        span{
-          font-size: map-get($font-size, xl);
-        }
-   
-
-        .btn-card-item {
-     
-          min-width: 250px;
-          max-width: 270px;
-          padding: 16px;
-          font-size: map-get($font-size, lg);
-
-          .icon-cart {
-            width: 32px;
-            height: 32px;
-          }
-        }
-      }
-    }
-  }
+.card-item {
+max-width: 300px;
 }
 }

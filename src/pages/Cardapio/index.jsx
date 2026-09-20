@@ -8,56 +8,141 @@ const Cardapio = () => {
   const cardapios = {
     unidade1: [
       {
-        title: "Tapioca recheada",
-        src: "/img2.jpg",
-        text: "Tapioca recheada com ingredientes regionais",
+        title: "Tapioca salgada recheada",
+        src: "/tapiocaCarne.jpg",
+        text: "Tapioca com amido de mandioca artesanal recheada com carne de sol, tomate seco e queijo.",
         tag: "Tradicional",
         preco: "R$ 12,00"
       },
 
       {
-        title: "Cuscuz recheado",
-        src: "/img2.jpg",
-        text: "Cuscuz recheado com ingredientes selecionados",
+        title: "Açaí",
+        src: "/acai2.jpg",
+        text: "Açaí doce com acompanhamentos: granola, mel, morango e kiwi.",
         tag: "Popular",
         preco: "R$ 15,00"
-      }
+      },
+            {
+        title: "Baião de dois",
+        src: "/ensopado.jpg",
+        text: "Arroz com feijão-de-corda ou feijão verde, queijo coalho e temperos.",
+        tag: "Tradicional",
+        preco: "R$ 20,00"
+      },
+            {
+        title: "Café artesanal",
+        src: "/cafe.jpg",
+        text: "Café artesanal. Grãos colhidos e selecionados a mão. Perfeito para qualquer hora do seu dia!",
+        tag: "Especial",
+        preco: "R$ 10,00"
+      },
+            {
+        title: "Bolinho de macaxeira",
+        src: "/bolinho.jpg",
+        text: "Bolinho de macaxeira tradicional",
+        tag: "Tradicional",
+        preco: "R$ 15,00"
+      },
+           {
+        title: "Acarajé",
+        src: "/acaraje.jpg",
+        text: "Acarajé tradicional nordestino. Massa aerada de feijão-fradinho, frita no azeite de dendê, recheado com vatapá (creme de pão, amendoim e castanhas), caruru (cozido de quiabo), camarão seco defumado e uma salada de vinagrete.",
+        tag: "Tradicional",
+        preco: "R$ 20,00"
+      },
+  
     ],
 
     unidade2: [
       {
-        title: "Bolo de macaxeira",
-        src: "/img2.jpg",
-        text: "Bolo de macaxeira caseiro",
+        title: "Pamonha",
+        src: "/pamonha2.jpg",
+        text: "Pamonha feita com milho regional.",
         tag: "Tradicional",
         preco: "R$ 10,00"
       },
 
       {
         title: "Café regional",
-        src: "/img2.jpg",
-        text: "Café acompanhado de ingredientes regionais",
+        src: "/cafe2.jpg",
+        text: "Café coado em mini coador de tecido, acompanhado de ingredientes regionais.",
         tag: "Popular",
         preco: "R$ 8,00"
-      }
+      },
+            {
+        title: "Cuscuz",
+        src: "/cuscuz.jpg",
+        text: "Cuscuz tradicional nordestino com ovos mexidos e queijo. Feito com milho regional.",
+        tag: "Tradicional",
+        preco: "R$ 12,00"
+      },
+            {
+        title: "Moqueca de peixe",
+        src: "/moquecaCamarao.jpg",
+        text: "Moqueca de peixe tradicional bahiana. Com peixe, cebola, pimentão e leite de coco.",
+        tag: "Tradicional",
+        preco: "R$ 12,00"
+      },
+        {
+        title: "Vatapá",
+        src: "/arrozCamarao.jpg",
+        text: "Creme aveludado feito à base de pão amanhecido (ou farinha), leite de coco, amendoim, castanha-de-caju, camarão seco e azeite de dendê. Acompanhado de arroz branco.",
+        tag: "Tradicional",
+        preco: "R$ 30,00"
+      },
+                {
+        title: "Tapioca doce recheada",
+        src: "/tapiocaDoce.jpg",
+        text: "Tapioca com amido de mandioca artesanal recheada com chocolate 60% cacau e morangos frescos.",
+        tag: "Popular",
+        preco: "R$ 12,00"
+      },
     ],
 
     unidade3: [
       {
-        title: "Cuscuz com carne de sol",
-        src: "/img2.jpg",
-        text: "Cuscuz recheado com carne de sol",
-        tag: "Especial",
-        preco: "R$ 18,00"
+        title: "Acarajé",
+        src: "/acaraje.jpg",
+        text: "Acarajé tradicional nordestino. Massa aerada de feijão-fradinho, frita no azeite de dendê, recheado com vatapá (creme de pão, amendoim e castanhas), caruru (cozido de quiabo), camarão seco defumado e uma salada de vinagrete.",
+        tag: "Tradicional",
+        preco: "R$ 20,00"
       },
 
       {
-        title: "Tapioca de queijo",
-        src: "/img2.jpg",
-        text: "Tapioca recheada com queijo",
+        title: "Carne com macaxeira",
+        src: "/carneMandioca.jpg",
+        text: "Carne em tirinhas com macaxeira nordestina frita",
+        tag: "Popular",
+        preco: "R$ 30,00"
+      },
+            {
+        title: "Vatapá",
+        src: "/arrozCamarao.jpg",
+        text: "Creme aveludado feito à base de pão amanhecido (ou farinha), leite de coco, amendoim, castanha-de-caju, camarão seco e azeite de dendê. Acompanhado de arroz branco.",
         tag: "Tradicional",
-        preco: "R$ 13,00"
-      }
+        preco: "R$ 30,00"
+      },
+            {
+        title: "Bolinho de peixe",
+        src: "/bolinhoFrito.jpg",
+        text: "8 unidades de bolinho de peixe regional.",
+        tag: "Popular",
+        preco: "R$ 20,00"
+      },
+            {
+        title: "Tapioca doce",
+        src: "/tapiocaDoce.jpg",
+        text: "Tapioca com amido de mandioca artesanal recheada com chocolate 60% cacau e morangos frescos.",
+        tag: "Popular",
+        preco: "R$ 12,00"
+      },
+             {
+        title: "Bolo de milho",
+        src: "/bolo2.jpg",
+        text: "Bolo de milho tradicional. Feito com farinha de milho regional.",
+        tag: "Popular",
+        preco: "R$ 12,00"
+      },
     ]
   };
   const cards = cardapios[unidade];
