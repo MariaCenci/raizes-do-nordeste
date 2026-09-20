@@ -1,9 +1,9 @@
-import "./card.scss";
-import Button from "../Button/Button.jsx";
-import Tag from "../Tag/Tag.jsx";
-import Price from "../Price/Price.jsx";
+import "./style.scss";
+import Button from "../Button";
+import Tag from "../Tag";
+import Preco from "../Preco";
 
-const Card = ({ title, src, text, tag, price }) => {
+const Card = ({ title, src, text, tag, preco }) => {
   return (
     <>
       <div className="card-item">
@@ -20,13 +20,8 @@ const Card = ({ title, src, text, tag, price }) => {
           <h2 className="card-item-title">{title}</h2>
           <p className="card-item-text">{text}</p>
           <div className="btn-container">
-            <Price price={price} />
-            <Button
-              className="card-item"
-              label="Buy now"
-              icon="./icons/cart.svg"
-              iconName="cart"
-            />
+            <Preco preco={preco} />
+       <button className="card-btn" ><img src="/trolley.png" alt="carrinho" /></button>
           </div>
         </div>
       </div>
