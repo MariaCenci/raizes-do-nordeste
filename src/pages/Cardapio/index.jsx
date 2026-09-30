@@ -1,6 +1,7 @@
 import "./style.scss";
 import { useParams } from "react-router-dom";
 import Card from "../../components/Card";
+import Carrossel from "../../components/Carrossel";
 
 const Cardapio = () => {
   const { unidade } = useParams();
@@ -151,7 +152,7 @@ const Cardapio = () => {
     <>
 <h2 className="title-cardapio"> Cardápio - {unidade.replace("unidade", "Unidade ")}</h2>    
       <div className="cards-wrapper">
-  
+  <Carrossel />
         <div className="cards-container">
 
           {cards.map((card) => (
