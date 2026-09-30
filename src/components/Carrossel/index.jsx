@@ -1,40 +1,55 @@
 import { useState } from "react";
 import "./style.scss";
+import Preco from "../Preco";
+import Tag from "../Tag";
 
 const Carrossel = () => {
-  const customers = [
-    {
-      name: "Jane Smith",
-      feedback: " Very good products!",
-      image: "/bolo.jpg",
-    },
-    {
-      name: "John Doe",
-      feedback: "A fantastic experience!",
-      image: "/bolo.jpg",
-    },
-    {
-      name: "Meredith Gray",
-      feedback: "Always fresh and beautifully decorated.",
-      image: "/bolo.jpg",
-    },
-    {
-      name: "Michael Johnson",
-      feedback: "Highly recommended!",
-      image: "/bolo.jpg",
-    },
+  const items = [
+      {
+        title: "Tapioca salgada recheada",
+        src: "/tapiocaCarne.jpg",
+        text: "Tapioca com amido de mandioca artesanal recheada com carne de sol, tomate seco e queijo.",
+        tag: "- 50%",
+        preco: "R$ 12,00"
+      },
 
-    {
-      name: "Tom Davis",
-      feedback: "I can never stop at just one!",
-      image: "/bolo.jpg",
-    },
-    {
-      name: "Ethan Wilson",
-      feedback: "My family loves the pastries.",
-      image: "/bolo.jpg",
-    },
-  ];
+      {
+        title: "Açaí",
+        src: "/acai2.jpg",
+        text: "Açaí doce com acompanhamentos: granola, mel, morango e kiwi.",
+        tag: "Popular",
+        preco: "R$ 15,00"
+      },
+            {
+        title: "Baião de dois",
+        src: "/ensopado.jpg",
+        text: "Arroz com feijão-de-corda ou feijão verde, queijo coalho e temperos.",
+        tag: "Tradicional",
+        preco: "R$ 20,00"
+      },
+            {
+        title: "Café artesanal",
+        src: "/cafe.jpg",
+        text: "Café artesanal. Grãos colhidos e selecionados a mão. Perfeito para qualquer hora do seu dia!",
+        tag: "Especial",
+        preco: "R$ 10,00"
+      },
+            {
+        title: "Bolinho de macaxeira",
+        src: "/bolinho.jpg",
+        text: "Bolinho de macaxeira tradicional",
+        tag: "Tradicional",
+        preco: "R$ 15,00"
+      },
+           {
+        title: "Acarajé",
+        src: "/acaraje.jpg",
+        text: "Acarajé tradicional nordestino. Massa aerada de feijão-fradinho, frita no azeite de dendê, recheado com vatapá (creme de pão, amendoim e castanhas), caruru (cozido de quiabo), camarão seco defumado e uma salada de vinagrete.",
+        tag: "Tradicional",
+        preco: "R$ 20,00"
+      },
+  
+    ]
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -68,32 +83,37 @@ const Carrossel = () => {
             <img src="/lower.svg" alt="" />
           </button>
           <div className="carousel-container">
+             
             <div
               className="carousel-wrapper"
               style={{ transform: transformValue }}
             >
-              {customers.map((customer, index) => (
+              
+              {items.map((items, index) => (
                 <div
-                  className="carousel-card"
+                 className="card-item"
                   key={index}
                 >
+                    <Tag 
+                   id="tag-promo" tag={items.tag} /> 
                   <img
-                    id="customer-img"
-                    src={customer.image}
-                    alt="customer image"
+                    className="card-item-img"
+                    src={items.src}
+                    alt="product image"
                   />
-                  <h3>{customer.name}</h3>
-                  <p>{customer.feedback}</p>
-                  <div className="star-icon-wrapper">
-                    {[...Array(5)].map((i) => (
-                      <img
-                        key={i}
-                        id="star-icon"
-                        src="./icons/iconStar.svg"
-                        alt=""
-                      />
-                    ))}
-                  </div>
+
+                   <div className="card-info-container">
+                    
+               <h2 className="card-item-title">{items.title}</h2>
+                  <p className="card-item-text">{items.text}</p>
+                   <div className="btn-container">
+                    
+                     <Preco preco={items.preco} />
+                     
+                  <button className="card-btn" ><img src="/trolley.png" alt="carrinho" /></button>
+                      </div>
+                 
+                    </div>
                 </div>
               ))}
             </div>

@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: map-get($colors, bg2-section);
+  
 
   .title-carousel {
     .title-section {
@@ -26,7 +26,7 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      height: 400px;
+      height: 490px;
       margin-top: 20px;
       position: relative;
       overflow: hidden;
@@ -44,6 +44,7 @@
         transition: transform 0.5s ease-in-out;
         gap: 18px;
 
+        /**
         .carousel-card {
           min-width: 222px;
           max-width: 252px;
@@ -59,23 +60,8 @@
           gap: 5px;
           padding: 20px;
           background-color: map-get($colors, bg3-section);
-
-          #customer-img {
-            margin: 38px 0 10px 0;
-            object-fit: cover;
-            width: 80px;
-            height: 80px;
-            border-radius: 50px;
-            box-shadow: 0 0 3px rgba(0, 0, 0, 0.76);
-          }
-
-          .star-icon-wrapper {
-            margin-top: 12px;
-
-            #star-icon {
-              width: 28px;
-            }
-          }
+        
+          }*/
 
           h3 {
             font-family: map-get($font-family, nav-links);
@@ -88,13 +74,17 @@
             font-family: map-get($font-family, body);
             font-weight: 300;
             text-align: center;
-            height: 48px;
+           //height: 10vh;
           }
+          .card-btn{
+
+          }
+     
         }
       }
-    }
+    } 
     .carousel-btn {
-      width: 100px;
+  width: 100px;
       border: none;
       box-shadow: none;
       background-color: transparent;
@@ -127,7 +117,7 @@
       }
     }
   }
-}
+
 
 @media (max-width: 960px) {
   .title-carousel {
