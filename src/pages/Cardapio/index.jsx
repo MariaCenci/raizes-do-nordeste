@@ -47,7 +47,7 @@ const Cardapio = () => {
            {
         title: "Acarajé",
         src: "/acaraje.jpg",
-        text: "Acarajé tradicional nordestino. Massa aerada de feijão-fradinho, frita no azeite de dendê, recheado com vatapá (creme de pão, amendoim e castanhas), caruru (cozido de quiabo), camarão seco defumado e uma salada de vinagrete.",
+        text: "Acarajé tradicional nordestino. Massa de feijão-fradinho, frita no azeite de dendê, recheado com vatapá, caruru, camarão seco e vinagrete.",
         tag: "Tradicional",
         preco: "R$ 20,00"
       },
@@ -104,7 +104,7 @@ const Cardapio = () => {
       {
         title: "Acarajé",
         src: "/acaraje.jpg",
-        text: "Acarajé tradicional nordestino. Massa aerada de feijão-fradinho, frita no azeite de dendê, recheado com vatapá (creme de pão, amendoim e castanhas), caruru (cozido de quiabo), camarão seco defumado e uma salada de vinagrete.",
+        text: "Acarajé tradicional nordestino. Massa de feijão-fradinho, frita no azeite de dendê, recheado com vatapá, caruru, camarão seco e vinagrete.",
         tag: "Tradicional",
         preco: "R$ 20,00"
       },
@@ -152,6 +152,7 @@ const Cardapio = () => {
     <>
 <h2 className="title-cardapio"> Cardápio - {unidade.replace("unidade", "Unidade ")}</h2>    
       <div className="cards-wrapper">
+       
   <Carrossel />
         <div className="cards-container">
 

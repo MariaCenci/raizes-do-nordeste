@@ -4,18 +4,18 @@
 .tag-container {
   span {
     display: flex;
-    min-width: 4rem;
-    max-width: 6rem;
+    min-width: 3rem;
+    max-width: 4rem;
     height: 30px;
-    padding: 10px;
+    padding: 4px;
     font-family: map-get($font-family, body);
-    font-weight: 400;
+    font-weight: 300;
     color: white;
     border-radius: 10px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.66);
     justify-content: center;
     align-items: center;
-    font-size: map-get($font-size, sm);
+    font-size: map-get($font-size, xxs);
     position: absolute;
     right: 0;
     margin: 10px 10px 0 0;

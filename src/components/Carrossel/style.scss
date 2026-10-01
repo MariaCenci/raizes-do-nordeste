@@ -1,3 +1,4 @@
+@use "sass:map";
 @import "../../styles/variables.scss";
 
 #carousel-section {
@@ -6,11 +7,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  
+  margin-top: 100px;
 
   .title-carousel {
     .title-section {
       text-align: center;
+      font-size: map.get($font-size, sm);
+      font-family: map.get($font-family, body);
+      font-weight: 400;
+      margin-top: 20px;
     }
   }
 
@@ -26,7 +31,7 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      height: 490px;
+      height: 350px;
       margin-top: 20px;
       position: relative;
       overflow: hidden;
@@ -63,112 +68,62 @@
         
           }*/
 
-          h3 {
-            font-family: map-get($font-family, nav-links);
-            font-weight: 700;
-            font-size: map-get($font-size, md);
-          }
-
-          p {
-            font-size: map-get($font-size, sm);
-            font-family: map-get($font-family, body);
-            font-weight: 300;
-            text-align: center;
-           //height: 10vh;
-          }
-          .card-btn{
-
-          }
      
-        }
-      }
-    } 
-    .carousel-btn {
-  width: 100px;
-      border: none;
-      box-shadow: none;
-      background-color: transparent;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transform: translateY(50%);
-      padding: 0;
-      transition: opacity 1s ease-in;
-      cursor: pointer;
-    }
 
-    #prev-btn {
-      img {
-        width: 38px;
-
-        &:hover {
-          transform: scale(1.2);
-        }
+      
       }
     }
+  }
+  .carousel-btn {
+    width: 100px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(50%);
+    padding: 0;
+    transition: opacity 1s ease-in;
+    cursor: pointer;
+  }
 
-    #next-btn {
-      img {
-        width: 38px;
+  /*botoes seta anterior e posterior*/
+  #prev-btn {
+    img {
+      width: 20px;
 
-        &:hover {
-          transform: scale(1.2);
-        }
+      &:hover {
+        transform: scale(1.2);
       }
     }
   }
 
+  #next-btn {
+    img {
+      width: 20px;
 
-@media (max-width: 960px) {
-  .title-carousel {
-    .title-section {
-      font-size: map-get($font-size, xl);
-      text-align: center;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  #carousel-section {
-    padding: 108px 18px 108px 18px;
-
-    .title-carousel {
-      .title-section {
-        font-size: map-get($font-size, lg);
-        padding: 0 10px;
+      &:hover {
+        transform: scale(1.2);
       }
     }
   }
 }
 
-@media (max-width: 340px) {
-  #carousel-section {
-    padding: 118px 8px 118px 8px;
 
-    .title-carousel {
-      .title-section {
-        font-size: map-get($font-size, md);
-        padding: 0 10px;
-      }
-    }
-  }
-}
 
 
 @media (min-width: 2560px) {
-
-
   #carousel-section {
-  
     .title-carousel {
       .title-section {
-       font-size: map-get($font-size, hero);
+        font-size: map-get($font-size, hero);
       }
     }
-  
+
     .carousel-section-wrapper {
       width: 100%;
- 
+
       .carousel-container {
         width: 100%;
         height: 580px;
@@ -177,14 +132,13 @@
           width: 100%;
           height: 490px;
           gap: 18px;
-  
+
           .carousel-card {
-min-width: 400px;
-max-width: 450px;
+            min-width: 400px;
+            max-width: 450px;
             height: 480px;
             margin: 18px 4px;
-          
-  
+
             #customer-img {
               margin: 38px 0 10px 0;
               object-fit: cover;
@@ -193,19 +147,19 @@ max-width: 450px;
               border-radius: 100px;
               box-shadow: 0 0 3px rgba(0, 0, 0, 0.76);
             }
-  
+
             .star-icon-wrapper {
               margin-top: 12px;
-  
+
               #star-icon {
                 width: 38px;
               }
             }
-  
+
             h3 {
               font-size: map-get($font-size, xl);
             }
-  
+
             p {
               font-size: map-get($font-size, md);
               height: 58px;
@@ -217,21 +171,21 @@ max-width: 450px;
       .carousel-btn {
         transform: translateY(26%);
       }
-  
+
       #prev-btn {
         img {
           width: 68px;
-  
+
           &:hover {
             transform: scale(1.2);
           }
         }
       }
-  
+
       #next-btn {
         img {
           width: 68px;
-  
+
           &:hover {
             transform: scale(1.2);
           }
@@ -239,5 +193,4 @@ max-width: 450px;
       }
     }
   }
-
 }

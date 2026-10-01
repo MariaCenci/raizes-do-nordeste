@@ -17,35 +17,35 @@ const Carrossel = () => {
         title: "Açaí",
         src: "/acai2.jpg",
         text: "Açaí doce com acompanhamentos: granola, mel, morango e kiwi.",
-        tag: "Popular",
+        tag: "- 15%",
         preco: "R$ 15,00"
       },
             {
         title: "Baião de dois",
         src: "/ensopado.jpg",
         text: "Arroz com feijão-de-corda ou feijão verde, queijo coalho e temperos.",
-        tag: "Tradicional",
+        tag: "- 10%",
         preco: "R$ 20,00"
       },
             {
         title: "Café artesanal",
         src: "/cafe.jpg",
         text: "Café artesanal. Grãos colhidos e selecionados a mão. Perfeito para qualquer hora do seu dia!",
-        tag: "Especial",
+        tag: "- 5%",
         preco: "R$ 10,00"
       },
             {
         title: "Bolinho de macaxeira",
         src: "/bolinho.jpg",
         text: "Bolinho de macaxeira tradicional",
-        tag: "Tradicional",
+        tag: "- 30%",
         preco: "R$ 15,00"
       },
            {
         title: "Acarajé",
         src: "/acaraje.jpg",
-        text: "Acarajé tradicional nordestino. Massa aerada de feijão-fradinho, frita no azeite de dendê, recheado com vatapá (creme de pão, amendoim e castanhas), caruru (cozido de quiabo), camarão seco defumado e uma salada de vinagrete.",
-        tag: "Tradicional",
+        text: "Acarajé tradicional nordestino. Massa de feijão-fradinho, frita no azeite de dendê, recheado com vatapá, caruru, camarão seco e vinagrete.",
+        tag: "- 10%",
         preco: "R$ 20,00"
       },
   
@@ -76,9 +76,9 @@ const Carrossel = () => {
     <>
       <section id="carousel-section">
         <div className="title-carousel">
-          <h1 className="title-section">Promoções!</h1>
-        </div>
-        <div className="carousel-section-wrapper">
+        <h3 className="title-section">Nossas promoções!</h3>
+        </div> 
+        <div className="carousel-section-wrapper">  
           <button id="prev-btn" className="carousel-btn" onClick={prevSlide}>
             <img src="/lower.svg" alt="" />
           </button>

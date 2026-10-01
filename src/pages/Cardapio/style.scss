@@ -2,11 +2,12 @@
 @import "../../styles/variables.scss";
 
 .title-cardapio {
-  display: block;
+ display: block;
   position: relative;
   top: 100px;
   text-align: center;
-  font-family: map.get($font-family, h1);
+  font-family: map.get($font-family, nav-links);
+  font-size: map.get($font-size, lg);
   font-weight: 500;
 }
 
@@ -24,7 +25,7 @@
     align-items: center;
    width: 40%;
     gap: 70px;
-    padding-top: 100px;
+    padding-top: 50px;
   }
 
 
