@@ -17,6 +17,7 @@
       justify-content: center;
       align-items: center;
       padding-top: 8px;
+
       .social {
         display: flex;
         justify-content: center;
@@ -27,9 +28,9 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: map.get($colors, btn);
-          width: 38px;
-          height: 38px;
+          background-color: map.get($colors, social);
+          width: 35px;
+          height: 35px;
           border-radius: 50px;
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.23);
           transition: transform 0.3s ease-in-out;
@@ -40,47 +41,19 @@
           }
 
           .social-img {
-               width: 20px;
+               width: 16px;
           }
         }
       }
     }
 
     .footer-text {
-      font-size: map-get($font-size, xs);
+      font-size: map-get($font-size, xxs);
     }
   }
 }
 
-@media (max-width: 559px) {
-  #footer {
-    
-
-    .footer-container {
-      gap: 32px;
-
-      .social-container {
-        .social {
-          gap:18px;
-
-          .social-item {
-            width: 28px;
-            height: 28px;
-        
-
-            .social-img {
-              width: 14px;
-            }
-          }
-        }
-      }
-
-      .footer-text {
-        font-size: map.get($font-size, xs);
-      }
-    }
-  }
-}
+  
 
 @media (min-width: 2560px) {
   #footer {

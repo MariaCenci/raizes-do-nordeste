@@ -6,7 +6,7 @@ const Home = () => {
       <div className="home-wrapper">
         <div className="container-hero">
           <div id="hero-banner">
-            <img src="./img5.jpg" alt="comida nordestina" />
+            <img src="/moquecaCamarao.jpg" alt="comida nordestina" />
            
           </div>
         </div>

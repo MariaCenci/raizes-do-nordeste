@@ -1,0 +1,49 @@
+@use "sass:map";
+@import "../../styles/variables.scss";
+
+.privacy-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.privacy-content {
+   display: flex;
+   flex-direction: column;
+  width: 80%;
+  max-width: 400px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+
+  p {
+    font-size: map.get($font-size, xxs);
+    padding: 10px 0px;
+  }
+
+  button {
+    padding: 10px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: map.get($colors, btn2);
+    color: map.get($colors, secondary);
+    font-weight: 700;
+    font-family: map.get($font-family, nav-links);
+    font-size: map.get($font-size, xxs);
+  }
+  a {
+    font-size: map.get($font-size, xxs);
+  }
+}

@@ -2,12 +2,12 @@
 @import "../../styles/variables.scss";
 
 .title-cardapio {
- display: block;
+  display: block;
   position: relative;
   top: 100px;
   text-align: center;
   font-family: map.get($font-family, nav-links);
-  font-size: map.get($font-size, lg);
+  font-size: map.get($font-size, md);
   font-weight: 500;
 }
 
@@ -18,32 +18,51 @@
   align-items: center;
   margin: 40px 0;
 }
-  .cards-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   width: 40%;
-    gap: 70px;
-    padding-top: 50px;
-  }
-
-
-@media screen and (min-width: 900px) {
-
-.cards-wrapper{
-  padding: 0 100px;
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  gap: 70px;
+  padding-top: 50px;
 }
 
-   .cards-container {
- display: flex;
+@media screen and (min-width: 580px) {
+  .cards-wrapper {
+    padding: 0 20px;
+  }
+
+  .cards-container {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
-      flex-wrap: wrap;
+    flex-wrap: wrap;
     width: 100%;
     gap: 20px;
+  }
+}
 
-  
-  
-   }
+@media screen and (min-width: 900px) {
+  .title-cardapio {
+    padding-top: 30px;
+    font-size: map.get($font-size, lg);
+  }
+
+  .cards-wrapper {
+    padding: 0 100px;
+
+    .card-item {
+      width: 200px;    
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+
+.cards-wrapper {
+    padding: 0 220px;
+
+}
 }

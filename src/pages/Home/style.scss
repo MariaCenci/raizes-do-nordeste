@@ -17,7 +17,9 @@
   .container-about {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 2em 2em;
+    gap: 30px;
 
     .text-wrapper {
       padding: 10px 0;
@@ -28,7 +30,7 @@
     }
 
     .img-wrapper {
-      width: 100%;
+      width:70%;
       img {
         width: 100%;
         border-radius: 100%;
@@ -61,7 +63,7 @@
         width: 52%;
       }
       .img-wrapper {
-        width: 40%;
+        width: 35%;
       }
     }
   }
