@@ -12,7 +12,7 @@
   .title-carousel {
     .title-section {
       text-align: center;
-      font-size: map.get($font-size, sm);
+      font-size: map.get($font-size, md);
       font-family: map.get($font-family, body);
       font-weight: 400;
       margin-top: 20px;
@@ -69,7 +69,11 @@
           }*/
 
      
-
+.card-item{
+  .tag{
+    background-color: map.get($colors, promo);
+  }
+}
       
       }
     }

@@ -2,6 +2,7 @@ import "./style.scss";
 import Button from "../Button";
 import Tag from "../Tag";
 import Preco from "../Preco";
+import { adicionarAoCarrinho } from "../../carrinho";
 
 const Card = ({ title, src, text, tag, preco }) => {
   return (
@@ -21,7 +22,20 @@ const Card = ({ title, src, text, tag, preco }) => {
           <p className="card-item-text">{text}</p>
           <div className="btn-container">
             <Preco preco={preco} />
-       <button className="card-btn" ><img src="/trolley.png" alt="carrinho" /></button>
+      <button
+  className="card-btn"
+  onClick={() => {
+    adicionarAoCarrinho({
+      title,
+      src,
+      text,
+      tag,
+      preco
+    });
+  }}
+>
+  <img src="/icon-cart.png" alt="Adicionar ao carrinho" />
+</button>
           </div>
         </div>
       </div>

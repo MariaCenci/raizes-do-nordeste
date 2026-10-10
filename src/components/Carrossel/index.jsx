@@ -2,13 +2,14 @@ import { useState } from "react";
 import "./style.scss";
 import Preco from "../Preco";
 import Tag from "../Tag";
+import { adicionarAoCarrinho } from "../../carrinho";
 
 const Carrossel = () => {
   const items = [
       {
-        title: "Tapioca salgada recheada",
-        src: "/tapiocaCarne.jpg",
-        text: "Tapioca com amido de mandioca artesanal recheada com carne de sol, tomate seco e queijo.",
+        title: "Dadinhos de tapioca",
+        src: "/dadoTapioca.jpg",
+        text: "Dadinhos de tapioca com amido de mandioca artesanal acompanhados de geleia de pimenta.",
         tag: "- 50%",
         preco: "R$ 12,00"
       },
@@ -58,14 +59,14 @@ const Carrossel = () => {
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === customers.length - visibleCards ? 0 : prevIndex + 1
+      prevIndex === items.length - visibleCards ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0
-        ? (prevIndex = customers.length - visibleCards)
+        ? (prevIndex = items.length - visibleCards)
         : prevIndex - 1
     );
   };
@@ -110,7 +111,12 @@ const Carrossel = () => {
                     
                      <Preco preco={items.preco} />
                      
-                  <button className="card-btn" ><img src="/trolley.png" alt="carrinho" /></button>
+                 <button
+  className="card-btn"
+  onClick={() => adicionarAoCarrinho(items)}
+>
+  <img src="/trolley.png" alt="Adicionar ao carrinho" />
+</button>
                       </div>
                  
                     </div>

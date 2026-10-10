@@ -51,6 +51,15 @@ const Cardapio = () => {
         tag: "Tradicional",
         preco: "R$ 20,00"
       },
+            {
+       title: "Pamonha",
+        src: "/pamonha2.jpg",
+        text: "Pamonha feita com milho regional.",
+        tag: "Tradicional",
+        preco: "R$ 10,00"
+      },
+
+  
   
     ],
 
@@ -95,6 +104,13 @@ const Cardapio = () => {
         title: "Tapioca doce recheada",
         src: "/tapiocaDoce.jpg",
         text: "Tapioca com amido de mandioca artesanal recheada com chocolate 60% cacau e morangos frescos.",
+        tag: "Popular",
+        preco: "R$ 12,00"
+      },
+                   {
+        title: "Bolo de milho",
+        src: "/bolo2.jpg",
+        text: "Bolo de milho tradicional. Feito com farinha de milho regional.",
         tag: "Popular",
         preco: "R$ 12,00"
       },
@@ -143,6 +159,13 @@ const Cardapio = () => {
         text: "Bolo de milho tradicional. Feito com farinha de milho regional.",
         tag: "Popular",
         preco: "R$ 12,00"
+      },
+                  {
+        title: "Café artesanal",
+        src: "/cafe.jpg",
+        text: "Café artesanal. Grãos colhidos e selecionados a mão. Perfeito para qualquer hora do seu dia!",
+        tag: "Especial",
+        preco: "R$ 10,00"
       },
     ]
   };
