@@ -49,8 +49,8 @@ const Carrinho = () => {
   );
 
   return (
-    <section className="carrinho">
-      <h1>Meu carrinho</h1>
+    <div className="carrinho">
+      <h2>Seu carrinho</h2>
 
       {produtos.length === 0 ? (
         <p>Seu carrinho está vazio.</p>
@@ -61,7 +61,7 @@ const Carrinho = () => {
               <img src={produto.src} alt={produto.title} />
 
               <div className="produto-info">
-                <h2>{produto.title}</h2>
+                <h4>{produto.title}</h4>
                 <p>{produto.preco}</p>
 
                 <div className="quantidade">
@@ -78,7 +78,7 @@ const Carrinho = () => {
 
                   <span>{produto.quantidade}</span>
 
-                  <button
+                  <button 
                     onClick={() =>
                       alterarQuantidade(
                         produto.title,
@@ -91,28 +91,33 @@ const Carrinho = () => {
                 </div>
 
                 <button
+                id="btn-remover"
                   onClick={() => removerProduto(produto.title)}
                 >
-                  Remover produto
+                  Remover
                 </button>
               </div>
             </div>
           ))}
 
-          <h2>
+<div className="pedido-final-wrapper">
+        <h4 id="preco-final">
             Total:{" "}
             {total.toLocaleString("pt-BR", {
               style: "currency",
               currency: "BRL"
             })}
-          </h2>
+          </h4>
 
-          <button onClick={() => navigate("/pagamento")}>
-            Finalizar compra
+          <button className="btn-pedido" onClick={() => navigate("/pagamento")}>
+          Realizar pedido
           </button>
+
+</div>
+  
         </>
       )}
-    </section>
+    </div>
   );
 };
 
