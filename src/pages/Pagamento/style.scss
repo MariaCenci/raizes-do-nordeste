@@ -1,0 +1,131 @@
+@use "sass:map";
+@import "../../styles/variables.scss";
+
+.pagina-pagamento {
+  padding: 130px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+
+  h1 {
+    font-size: map.get($font-size, lg);
+    font-family: map.get($font-family, nav-links);
+    font-weight: 500;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: map.get($font-size, md);
+    font-weight: 400;
+    text-decoration: underline;
+    padding-bottom: 10px;
+  }
+
+  span {
+    font-weight: 500;
+  }
+
+  .span-preco {
+    font-weight: 400;
+    padding-left: 6px;
+    font-size: map.get($font-size, xs);
+  }
+
+  #total-pagamento {
+    font-size: map.get($font-size, md);
+    padding-top: 20px;
+    font-weight: 600;
+    color: map.get($colors, link);
+  }
+
+  .form-dados {
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h3 {
+        margin-top: 24px;
+      }
+
+      label {
+        font-size: map.get($font-size, xs);
+      }
+
+      input#nome,
+      #cpf {
+        border: none;
+        width: 80%;
+        border-radius: 4px;
+        box-shadow: 0 0 3px rgba(127, 138, 166, 0.727);
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  #btn-pagamento {
+    width: 160px;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 3px rgba(47, 47, 47, 0.612);
+    font-size: map.get($font-size, xs);
+    font-family: map.get($font-family, body);
+    font-weight: 500;
+    color: map-get($colors, secondary);
+    background-color: map.get($colors, link);
+    margin-top: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: map.get($colors, btn2-hover);
+    }
+  }
+
+  .form-dados-pagamento {
+    display: flex;
+    flex-direction: column;
+
+    input[type="radio"] {
+      accent-color: map.get($colors, link);
+      margin-right: 4px;
+    }
+  }
+
+  .dados-cartao {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+
+    input {
+      margin-bottom: 12px;
+      border: none;
+      width: 70%;
+      border-radius: 4px;
+      box-shadow: 0 0 3px rgba(127, 138, 166, 0.727);
+      padding: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .pagina-pagamento {
+    padding: 130px 200px;
+
+    .form-dados {
+      form {
+        input#nome,
+        #cpf {
+          width: 40%;
+        }
+      }
+    }   
+    #btn-pagamento {
+      width: 38%;
+   }
+  }
+
+}

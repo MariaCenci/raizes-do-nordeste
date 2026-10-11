@@ -11,6 +11,7 @@ import Header from './components/Header'
 import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
 import Privacidade from './components/Privacidade'
+import Pagamento from './pages/Pagamento'
 
 const App = () => {
 
@@ -56,6 +57,8 @@ useEffect(() => {
           <Route path="/pedidos" element={<Pedidos />} />
 
           <Route path="/carrinho" element={<Carrinho />} />
+
+          <Route path="/pagamento" element={<Pagamento />}/>
 
         </Routes>
 

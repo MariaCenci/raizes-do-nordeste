@@ -115,7 +115,7 @@ const Carrossel = () => {
   className="card-btn"
   onClick={() => adicionarAoCarrinho(items)}
 >
-  <img src="/trolley.png" alt="Adicionar ao carrinho" />
+  <img src="/icon-cart.png" alt="Adicionar ao carrinho" />
 </button>
                       </div>
                  
