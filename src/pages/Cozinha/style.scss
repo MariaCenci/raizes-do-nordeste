@@ -1,0 +1,109 @@
+@use "sass:map";
+@import "../../styles/variables.scss";
+
+.cozinha-wrapper {
+  padding: 100px 20px;
+
+  h2 {
+    text-align: center;
+    font-family: map.get($font-family, nav-links);
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    font-weight: 500;
+  }
+  .mensagem-alt {
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .cozinha-descricao {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .cozinha-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cozinha-pedido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+    background-color: map.get($colors, secondary);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+  }
+
+  .cozinha-pedido-info {
+    h3 {
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+  }
+
+  .cozinha-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+
+      &:hover:not(:disabled) {
+        background-color: map.get($colors, btn2-hover);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+
+    #btn-preparo {
+      background-color: map.get($colors, link);
+      color: map.get($colors, secondary);
+    }
+
+    #btn-pronto {
+      background-color: map.get($colors, btn3);
+      color: map.get($colors, secondary);
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .cozinha-wrapper {
+    padding: 100px 100px;
+    .cozinha-pedido {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .cozinha-wrapper {
+    padding: 160px 300px;
+  }
+}

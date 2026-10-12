@@ -13,6 +13,7 @@ import Cadastro from './pages/Cadastro'
 import Privacidade from './components/Privacidade'
 import Pagamento from './pages/Pagamento'
 import Processamento from "./pages/Processamento";
+import Cozinha from "./pages/Cozinha";
 
 const App = () => {
 
@@ -61,6 +62,7 @@ const App = () => {
 
           <Route path="/pagamento" element={<Pagamento />} />
           <Route path="/processamento" element={<Processamento />} />
+          <Route path="/cozinha" element={<Cozinha />} />
         </Routes>
 
         {mostrarPrivacidade && (

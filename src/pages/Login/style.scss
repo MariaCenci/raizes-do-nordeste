@@ -73,6 +73,13 @@
     flex-wrap: wrap;
     gap: 6px;
   }
+
+    .mensagem-erro{
+    font-size: map.get($font-size, xxs);
+    font-family: map.get($font-family, body);
+    color: map.get($colors, link);
+    padding: 4px 0;
+  }
 }
 
 @media screen and (min-width: 900px) {

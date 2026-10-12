@@ -41,10 +41,19 @@ const Pedidos = () => {
                 </p>
               </div>
 
-              <div className="wrapper-status">
-                <p>{pedido.status}</p>
-                <div className="status-blue"></div>
-              </div>
+           <div className="wrapper-status">
+  <p>{pedido.status}</p>
+
+  <div
+    className={
+      pedido.status === "Pronto"
+        ? "status-green"
+        : pedido.status === "Em preparo"
+        ? "status-yellow"
+        : "status-blue"
+    }
+  ></div>
+</div>
 
             </div>
             
