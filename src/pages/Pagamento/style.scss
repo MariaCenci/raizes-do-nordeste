@@ -79,7 +79,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: map.get($colors, btn2-hover);
+      background-color: map.get($colors, btn3-hover);
     }
   }
 
@@ -108,6 +108,13 @@
       box-shadow: 0 0 3px rgba(127, 138, 166, 0.727);
       padding: 5px;
     }
+  }
+
+  .mensagem-erro{
+    font-size: map.get($font-size, xxs);
+    font-family: map.get($font-family, body);
+    color: map.get($colors, link);
+    padding: 4px 0;
   }
 }
 

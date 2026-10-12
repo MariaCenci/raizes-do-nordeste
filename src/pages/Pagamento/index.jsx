@@ -35,40 +35,50 @@ const Pagamento = () => {
       currency: "BRL"
     });
 
-  const finalizarPagamento = (e) => {
-    e.preventDefault();
+    //validar preenchimento campos dados e cartao
+  const [erroDados, setErroDados] = useState("");
+const [erroCartao, setErroCartao] = useState("");
 
-    if (produtos.length === 0) {
-      alert("Seu carrinho está vazio.");
-      navigate("/carrinho");
-      return;
-    }
+  
+const finalizarPagamento = (e) => {
+  e.preventDefault();
 
-    if (!nome.trim() || !cpf.trim()) {
-      alert("Preencha seu nome e CPF.");
-      return;
-    }
+  if (produtos.length === 0) {
+    alert("Seu carrinho está vazio.");
+    navigate("/carrinho");
+    return;
+  }
 
-    if (
-      formaPagamento === "cartao" &&
-      (!numeroCartao.trim() || !validade.trim() || !cvv.trim())
-    ) {
-      alert("Preencha os dados do cartão de demonstração.");
-      return;
-    }
+  if (!nome.trim() || !cpf.trim()) {
+    setErroDados("Preencha seu nome e CPF.");
+    return;
+  }
+//limpa mensagens erro
+  setErroDados("");
 
-    localStorage.setItem(
-      "pagamento",
-      JSON.stringify({
-        nome,
-        formaPagamento,
-        total,
-        status: "em processamento"
-      })
-    );
+  if (
+    formaPagamento !== "pix" &&
+    (!numeroCartao.trim() || !validade.trim() || !cvv.trim())
+  ) {
+    setErroCartao("Preencha os dados do cartão.");
+    return;
+  }
 
-    navigate("/processando");
-  };
+  setErroCartao("");
+
+  localStorage.setItem(
+    "pagamento",
+    JSON.stringify({
+      nome,
+      formaPagamento,
+      total,
+      status: "em processamento"
+    })
+  );
+
+  navigate("/processando");
+};
+
 
   return (
     <div className="pagina-pagamento">
@@ -104,8 +114,9 @@ const Pagamento = () => {
           type="text"
           value={nome}
           onChange={(e) => setNome(e.target.value)}
-          required
+          //required
         />
+        {erroDados && <p className="mensagem-erro">{erroDados}</p>}
 
         <label htmlFor="cpf">Cpf</label>
         <input
@@ -114,8 +125,9 @@ const Pagamento = () => {
           value={cpf}
           onChange={(e) => setCpf(e.target.value)}
           placeholder="000.000.000-00"
-          required
+          //required
         />
+        {erroDados && <p className="mensagem-erro">{erroDados}</p>}
 
 <div className="form-dados-pagamento">
         <h3>Forma de pagamento</h3>
@@ -126,7 +138,10 @@ const Pagamento = () => {
             name="pagamento"
             value="pix"
             checked={formaPagamento === "pix"}
-            onChange={(e) => setFormaPagamento(e.target.value)}
+            onChange={(e) => {
+  setFormaPagamento(e.target.value);
+  setErroCartao("");
+}}
           />
           Pix
         </label>
@@ -137,7 +152,10 @@ const Pagamento = () => {
             name="pagamento"
             value="cartao"
             checked={formaPagamento === "cartao"}
-            onChange={(e) => setFormaPagamento(e.target.value)}
+        onChange={(e) => {
+  setFormaPagamento(e.target.value);
+  setErroCartao("");
+}}
           />
           Cartão de crédito
         </label>
@@ -148,7 +166,10 @@ const Pagamento = () => {
             name="pagamento"
             value="debito"
             checked={formaPagamento === "debito"}
-            onChange={(e) => setFormaPagamento(e.target.value)}
+            onChange={(e) => {
+  setFormaPagamento(e.target.value);
+  setErroCartao("");
+}}
           />
           Cartão de débito
         </label>
@@ -164,8 +185,9 @@ const Pagamento = () => {
               value={numeroCartao}
               onChange={(e) => setNumeroCartao(e.target.value)}
               placeholder="0000 0000 0000 0000"
+              
             />
-
+{erroCartao && <p className="mensagem-erro">{erroCartao}</p>}
             <label htmlFor="validade">Validade</label>
             <input
               id="validade"
@@ -174,7 +196,7 @@ const Pagamento = () => {
               onChange={(e) => setValidade(e.target.value)}
               placeholder="MM/AA"
             />
-
+{erroCartao && <p className="mensagem-erro">{erroCartao}</p>}
             <label htmlFor="cvv">CVV</label>
             <input
               id="cvv"
@@ -182,7 +204,7 @@ const Pagamento = () => {
               value={cvv}
               onChange={(e) => setCvv(e.target.value)}
               placeholder="000"
-            />
+            />{erroCartao && <p className="mensagem-erro">{erroCartao}</p>}
           </div>
         )}
 
