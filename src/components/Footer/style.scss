@@ -3,7 +3,30 @@
 
 #footer {
   background-color: map-get($colors, secondary);
-  padding: 22px 0 18px 0;
+  padding: 80px 0 40px 0;
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+width: 93%;
+
+    #logo {
+      
+         width: 110px;
+      }
+     
+    
+    .solid-line {
+    width: 100%;
+    border: solid 1px;
+    border-color: map.get($colors, line);
+    box-shadow: 0 0 8px rgba(97, 124, 199, 0.654);
+  }
+  }
+
+  
 
   .footer-container {
     display: flex;
@@ -16,7 +39,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 8px;
+      //padding-top: 8px;
 
       .social {
         display: flex;
@@ -28,11 +51,12 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: map.get($colors, social);
           width: 35px;
           height: 35px;
+          border: solid 0.5px;
           border-radius: 50px;
-          box-shadow: 0 0 3px rgba(0, 0, 0, 0.23);
+          border-color: map.get($colors, line);
+    box-shadow: 0 0 2px rgba(120, 91, 82, 0.457);
           transition: transform 0.3s ease-in-out;
           cursor: pointer;
 
@@ -41,7 +65,7 @@
           }
 
           .social-img {
-               width: 16px;
+            width: 14px;
           }
         }
       }
@@ -53,7 +77,19 @@
   }
 }
 
-  
+@media (min-width: 900px) {
+  #footer {
+    .logo-wrapper {
+      #logo {
+        width: 120px;
+      }
+    }
+      .solid-line{
+    width: 900px;
+    
+  }
+  }
+}
 
 @media (min-width: 2560px) {
   #footer {

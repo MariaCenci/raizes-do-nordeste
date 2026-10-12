@@ -19,20 +19,24 @@ const Processamento = () => {
         localStorage.getItem("carrinho") || "[]"
       );
 
+        const pedidos = JSON.parse(
+        localStorage.getItem("pedidos") || "[]"
+      );
+
       const pedido = {
-        id: Date.now(),
+        id: pedidos.length + 1,
         nome: pagamento.nome,
         formaPagamento: pagamento.formaPagamento,
         total: pagamento.total,
         produtos,
-        status: "Pedido confirmado"
+        status: "Confirmado"
       };
 
-      const pedidos = JSON.parse(
-        localStorage.getItem("pedidos") || "[]"
-      );
+ pedidos.push(pedido);
 
-      pedidos.push(pedido);
+    
+
+     
 
       localStorage.setItem("pedidos", JSON.stringify(pedidos));
 

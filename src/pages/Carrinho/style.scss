@@ -3,11 +3,17 @@
 
 .carrinho {
   padding: 40px 20px;
+
   h2 {
     text-align: center;
     font-family: map.get($font-family, nav-links);
     font-weight: 400;
     padding: 80px 10px 40px 10px;
+  }
+
+  p {
+    padding: 80px 0;
+    text-align: center;
   }
 
   .produto-carrinho {
@@ -20,13 +26,14 @@
     font-family: map.get($font-family, body);
     background-color: map.get($colors, secondary);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.121);
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 24px;
 
     .produto-info {
       p {
         padding: 10px 0;
         font-size: map.get($font-size, xs);
+        text-align: start;
       }
 
       h4 {
@@ -61,13 +68,14 @@
         font-weight: 500;
         color: map-get($colors, secondary);
         background-color: map.get($colors, promo);
+        cursor: pointer;
       }
     }
 
     img {
-      border-radius: 50px;
-      width: 60px;
-      height: 60px;
+      border-radius: 8px;
+      width: 90px;
+      height: 90px;
       object-fit: cover;
     }
   }
@@ -102,33 +110,78 @@
     }
   }
 }
-@media screen and (min-width: 600px)and (max-width:1100px) {
+@media screen and (min-width: 600px) and (max-width: 899px) {
   .carrinho {
-    padding: 70px 100px;
+    padding: 70px 160px;
     .produto-carrinho {
-     
-        img {
-          border-radius: 50px;
-          width: 90px;
-          height: 90px;
-        }
+      img {
+        border-radius: 8px;
+        width: 110px;
+        height: 110px;
       }
     }
+        .pedido-final-wrapper {
+      button.btn-pedido {
+        width: 210px;
+      }
+    }
+  }
 }
 
-@media screen and (min-width: 1101px){
-  .carrinho {
-    padding: 70px 400px;
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+.carrinho {
+    padding: 70px 220px;
     .produto-carrinho {
-     
-        img {
-          border-radius: 50px;
-          width: 90px;
-          height: 90px;
-        }
+      img {
+        border-radius: 8px;
+        width: 140px;
+        height: 140px;
       }
     }
 
+    .pedido-final-wrapper {
+      button.btn-pedido {
+        width: 210px;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 1101px) {
+  .carrinho {
+    padding: 70px 350px;
+    .produto-carrinho {
+      img {
+        border-radius: 8px;
+        width: 140px;
+        height: 140px;
+      }
+    }
+
+    .pedido-final-wrapper {
+      button.btn-pedido {
+        width: 210px;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 1140px) {
+
+  .carrinho {
+    padding: 70px 450px;
+    .produto-carrinho {
+      img {
+        border-radius: 8px;
+        width: 140px;
+        height: 140px;
+      }
+    }
+
+   
+  }
 
 
 }

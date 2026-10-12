@@ -73,6 +73,7 @@ const Carrossel = () => {
 
   const transformValue = `translateX(-${currentIndex * cardWidth}px)`;
 
+  const [mensagemCarrinho, setMensagem] = useState("");
   return (
     <>
       <section id="carousel-section">
@@ -111,9 +112,23 @@ const Carrossel = () => {
                     
                      <Preco preco={items.preco} />
                      
-                 <button
+<button
   className="card-btn"
-  onClick={() => adicionarAoCarrinho(items)}
+  onClick={() => {
+    adicionarAoCarrinho({
+      title: items.title,
+      src: items.src,
+      text: items.text,
+      tag: items.tag,
+      preco: items.preco
+    });
+
+    setMensagem(alert(`Adicionado ao carrinho!`));
+
+    setTimeout(() => {
+      setMensagem("");
+    }, 2500);
+  }}
 >
   <img src="/icon-cart.png" alt="Adicionar ao carrinho" />
 </button>

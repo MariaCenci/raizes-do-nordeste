@@ -1,10 +1,12 @@
 import "./style.scss";
-import Button from "../Button";
+import { useState } from "react";
 import Tag from "../Tag";
 import Preco from "../Preco";
 import { adicionarAoCarrinho } from "../../carrinho";
 
+
 const Card = ({ title, src, text, tag, preco }) => {
+  const [mensagemCarrinho, setMensagem] = useState("");
   return (
     <>
       <div className="card-item">
@@ -22,7 +24,8 @@ const Card = ({ title, src, text, tag, preco }) => {
           <p className="card-item-text">{text}</p>
           <div className="btn-container">
             <Preco preco={preco} />
-      <button
+
+<button
   className="card-btn"
   onClick={() => {
     adicionarAoCarrinho({
@@ -32,10 +35,21 @@ const Card = ({ title, src, text, tag, preco }) => {
       tag,
       preco
     });
+
+    setMensagem(alert(`Adicionado ao carrinho!`));
+
+    setTimeout(() => {
+      setMensagem("");
+    }, 2500);
   }}
 >
   <img src="/icon-cart.png" alt="Adicionar ao carrinho" />
 </button>
+
+{mensagemCarrinho && (
+  <p className="mensagem-carrinho">{mensagemCarrinho}</p>
+)}
+
           </div>
         </div>
       </div>

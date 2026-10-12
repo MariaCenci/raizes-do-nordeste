@@ -5,7 +5,12 @@ const Footer = () => {
     <>
  <section id="footer">
         <div className="footer-container">
+               <div className="logo-wrapper">
+                <img id="logo" src="/logo.png" alt="" />
+                <div className="solid-line"></div>
+              </div>
           <div className="social-container">
+            
             <div className="social">
               <div className="social-item">
                 <a href="mailto:raizesNordeste@gmail.com">
@@ -38,7 +43,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <p className="footer-text">Copyright©2026</p>
+          <p className="footer-text">©Copyright2026</p>
         </div>
       </section>
     </>

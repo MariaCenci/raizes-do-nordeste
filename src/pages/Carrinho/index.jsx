@@ -53,7 +53,7 @@ const Carrinho = () => {
       <h2>Seu carrinho</h2>
 
       {produtos.length === 0 ? (
-        <p>Seu carrinho está vazio.</p>
+        <p>Seu carrinho está vazio :/</p>
       ) : (
         <>
           {produtos.map((produto) => (
