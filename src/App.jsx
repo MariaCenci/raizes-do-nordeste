@@ -12,6 +12,7 @@ import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
 import Privacidade from './components/Privacidade'
 import Pagamento from './pages/Pagamento'
+import Processamento from "./pages/Processamento";
 
 const App = () => {
 
@@ -20,12 +21,12 @@ const App = () => {
   const [mostrarPrivacidade, setMostrarPrivacidade] = useState(false);
 
   const privacidadeAceita = sessionStorage.getItem("privacidadeAceita");
-  
-useEffect(() => {
-  if (logado) {
-    setMostrarPrivacidade(true);
-  }
-}, [logado]);
+
+  useEffect(() => {
+    if (logado) {
+      setMostrarPrivacidade(true);
+    }
+  }, [logado]);
 
   return (
     <>
@@ -58,15 +59,15 @@ useEffect(() => {
 
           <Route path="/carrinho" element={<Carrinho />} />
 
-          <Route path="/pagamento" element={<Pagamento />}/>
-
+          <Route path="/pagamento" element={<Pagamento />} />
+          <Route path="/processamento" element={<Processamento />} />
         </Routes>
 
-      {mostrarPrivacidade && (
-        <Privacidade
-          onClose={() => setMostrarPrivacidade(false)}
-        />
-      )}
+        {mostrarPrivacidade && (
+          <Privacidade
+            onClose={() => setMostrarPrivacidade(false)}
+          />
+        )}
       </BrowserRouter>
 
       {logado && <Footer />}

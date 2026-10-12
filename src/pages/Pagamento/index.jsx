@@ -76,7 +76,7 @@ const finalizarPagamento = (e) => {
     })
   );
 
-  navigate("/processando");
+  navigate("/processamento");
 };
 
 

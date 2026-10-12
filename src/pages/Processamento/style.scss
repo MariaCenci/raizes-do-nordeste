@@ -1,0 +1,51 @@
+@use "sass:map";
+@import "../../styles/variables.scss";
+
+
+.pagina-processando {
+   padding-top: 500px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  padding: 24px;
+
+  h2 {
+    margin: 8px 0 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.rodinha {
+  width: 55px;
+  height: 55px;
+  border: 5px solid #e0e0e0;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icone-sucesso {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: map.get($colors, btn2);
+  color: map.get($colors, secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  font-weight: bold;
+}

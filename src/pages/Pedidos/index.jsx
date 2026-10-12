@@ -2,11 +2,21 @@ import React from 'react'
 import "./style.scss"
 
 const Pedidos = () => {
+  const pedidos = JSON.parse(
+  localStorage.getItem("pedidos") || "[]"
+);
   return (
     <>
+   
       <h2 className='title-pedido'>Meus pedidos</h2>
       <div className="pedidos-wrapper">
         <div className="pedidos-container">
+          <div className="pedido-item">
+            <div className="wrapper-text">
+              <h5>Pedido #006</h5>
+            
+            </div>
+          </div>
           <div className="pedido-item">
               <div className="wrapper-text">
               <h5>Pedido #004</h5>
@@ -76,3 +86,37 @@ const Pedidos = () => {
 }
 
 export default Pedidos
+
+
+/**
+ {pedidos.map((pedido) => (
+  <div key={pedido.id} className="pedido" >
+    <h3>Pedido #{pedido.id}</h3>
+
+    <p>Cliente: {pedido.nome}</p>
+
+    <p>
+      Forma de pagamento: {pedido.formaPagamento}
+    </p>
+
+    <p>
+      Total: {pedido.total.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+      })}
+    </p>
+
+    <p>Status: {pedido.status}</p>
+
+    <h4>Produtos</h4>
+
+    {pedido.produtos.map((produto, index) => (
+      <p key={produto.id ?? produto.title ?? index}>
+        {produto.title} x {produto.quantidade}
+      </p>
+    ))}
+  </div>
+))} 
+
+
+ */
