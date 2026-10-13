@@ -1,5 +1,5 @@
 @use "sass:map";
-@import "../../styles/variables.scss";
+@import "../../Styles/variables.scss";
 
 #footer {
   background-color: map-get($colors, secondary);
