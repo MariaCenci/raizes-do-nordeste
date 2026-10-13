@@ -184,6 +184,7 @@ const Cardapio = () => {
               key={card.title}
               title={card.title}
               src={card.src}
+               loading="lazy"
               text={card.text}
               tag={card.tag}
               preco={card.preco}

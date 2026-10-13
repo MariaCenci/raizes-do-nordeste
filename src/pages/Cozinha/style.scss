@@ -46,16 +46,19 @@
 
   .cozinha-pedido-info {
     h3 {
+      font-size: map.get($font-size, sm);
       margin-bottom: 12px;
     }
 
     ul {
       padding-left: 20px;
       margin-bottom: 12px;
+      font-size: map.get($font-size, sm);
     }
 
     p {
       margin-top: 10px;
+      font-size: map.get($font-size, sm);
     }
   }
 

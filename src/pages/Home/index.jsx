@@ -6,8 +6,8 @@ const Home = () => {
       <div className="home-wrapper">
         <div className="container-hero">
           <div id="hero-banner">
-            <img src="/moquecaCamarao.jpg" alt="comida nordestina" />
-           
+            <img src="/moquecaCamarao.jpg" alt="comida nordestina" fetchPriority="high" />
+
           </div>
         </div>
         <div className="container-about">
@@ -22,7 +22,7 @@ const Home = () => {
           </div>
 
           <div className="img-wrapper">
-            <img src="./mesas.jpg" alt="" />
+            <img src="./mesas.jpg" alt="local com mesas e cadeiras" />
           </div>
         </div>
 

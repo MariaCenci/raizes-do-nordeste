@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.scss";
@@ -78,7 +77,7 @@ const Carrinho = () => {
 
                   <span>{produto.quantidade}</span>
 
-                  <button 
+                  <button
                     onClick={() =>
                       alterarQuantidade(
                         produto.title,
@@ -91,7 +90,7 @@ const Carrinho = () => {
                 </div>
 
                 <button
-                id="btn-remover"
+                  id="btn-remover"
                   onClick={() => removerProduto(produto.title)}
                 >
                   Remover
@@ -100,21 +99,21 @@ const Carrinho = () => {
             </div>
           ))}
 
-<div className="pedido-final-wrapper">
-        <h4 id="preco-final">
-            Total:{" "}
-            {total.toLocaleString("pt-BR", {
-              style: "currency",
-              currency: "BRL"
-            })}
-          </h4>
+          <div className="pedido-final-wrapper">
+            <h4 id="preco-final">
+              Total:{" "}
+              {total.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL"
+              })}
+            </h4>
 
-          <button className="btn-pedido" onClick={() => navigate("/pagamento")}>
-          Realizar pedido
-          </button>
+            <button className="btn-pedido" onClick={() => navigate("/pagamento")}>
+              Realizar pedido
+            </button>
 
-</div>
-  
+          </div>
+
         </>
       )}
     </div>

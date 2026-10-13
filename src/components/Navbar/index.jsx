@@ -4,7 +4,7 @@ import HamburguerMenu from "../HamburguerMenu";
 import "./style.scss";
 
 const Navbar = () => {
-  //updates screen width for responsivity
+  //atualiza tela de acordo com responsividade
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {

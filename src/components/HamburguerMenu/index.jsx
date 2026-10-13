@@ -5,20 +5,20 @@ import "./style.scss";
 
 const HamburguerMenu = () => {
    const body = document.querySelector('body')
-   //setMenu to true or false according to opened or closed
+   //menu true ou false em base a estar aberto ou fechado
    const [activeMenu, setActiveMenu] = useState(false);
 
-   //open and close menu
+   //abre e fecha menu
    const toggleMenu = () => {
       setActiveMenu(!activeMenu);
    };
 
-   //closes menu when a link is clicked
+   //fecha menu quando link é clicado
    const closeMenu = () => {
       setActiveMenu(false)
    }
 
-   // disactivate scroll bar opened menu 
+   // desativa scroll bar com menu aberto
    if (activeMenu) {
       body.style.overflow = 'hidden'
    } else {
