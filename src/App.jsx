@@ -17,7 +17,21 @@ import Cozinha from "./pages/Cozinha";
 
 const App = () => {
 
-  const logado = localStorage.getItem("logado");
+ const [logado, setLogado] = useState(
+  localStorage.getItem("logado") === "true"
+);
+
+useEffect(() => {
+  const atualizarLogin = () => {
+    setLogado(localStorage.getItem("logado") === "true");
+  };
+
+  window.addEventListener("loginAtualizado", atualizarLogin);
+
+  return () => {
+    window.removeEventListener("loginAtualizado", atualizarLogin);
+  };
+}, []);
 
   const [mostrarPrivacidade, setMostrarPrivacidade] = useState(false);
 

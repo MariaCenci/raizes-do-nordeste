@@ -20,6 +20,7 @@ const Login = () => {
     setErroCampos("");
 
     localStorage.setItem("logado", "true");
+    window.dispatchEvent(new Event("loginAtualizado"));
     navigate("/inicio");
   }
 
